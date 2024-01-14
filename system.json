@@ -17,7 +17,7 @@
   },
   "relationships": [],
   "manifest": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/tag/1.0/system.json",
-  "download": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/tag/1.0/system.zip",
+  "download": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/download/1.0/system.zip",
   "initiative": "1d20",
   "esmodules": [
     "module/sav.js"
