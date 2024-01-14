@@ -1,7 +1,7 @@
 # FoundryVTT Scum and Villainy character and ship sheets
 <p>
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/drewg13/foundryvtt-girl-by-moonlight">
-  <img alt="GitHub downloads (latest)" src="https://img.shields.io/github/downloads/drewg13/foundryvtt-girl-by-moonlight/latest/system.zip">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/drewg13/foundryvtt-scum-and-villainy">
+  <img alt="GitHub downloads (latest)" src="https://img.shields.io/github/downloads/drewg13/foundryvtt-scum-and-villainy/latest/system.zip">
 </p>
 
 An attempt to adapt the Blades in the Dark system created by megastruktur to Scum and Villainy
@@ -21,9 +21,9 @@ Icons were created using the Pixel Planet Generator by Deep-Fold and are free to
 
 Note that, due to limitations in the FoundryVTT architecture (or perhaps the underlying browser architecture), each animated icon requires both a WEBP **and** a WEBM version with identical root filenames in the same directory.  WEBP icons must be used as the icons for the Items and WEBM icons are required for the Tiles on the game canvas.
 
-The system will automatically assign a random icon from the icons supplied with the system to any newly created planet or star system.  You can change it by clicking the icon on the Item Sheet, navigating to systems/girl-by-moonlight/styles/assets/planets or systems/girl-by-moonlight/styles/assets/stars, and picking from the available WEBP files shown.  Also included are some default assignments for the compendium planets and stars, as well as asteroids and black holes.  (Only files that begin with "planet" or "sun" will be used for random assignment)  You can also upload your own custom icons to your user data directory and choose those.  Be sure to have the corresponding WEBM file in the same directory, if you intend to make use of the Tile feature.
+The system will automatically assign a random icon from the icons supplied with the system to any newly created planet or star system.  You can change it by clicking the icon on the Item Sheet, navigating to systems/scum-and-villainy/styles/assets/planets or systems/scum-and-villainy/styles/assets/stars, and picking from the available WEBP files shown.  Also included are some default assignments for the compendium planets and stars, as well as asteroids and black holes.  (Only files that begin with "planet" or "sun" will be used for random assignment)  You can also upload your own custom icons to your user data directory and choose those.  Be sure to have the corresponding WEBM file in the same directory, if you intend to make use of the Tile feature.
 
-To place an animated icon of your planet or sun onto the canvas, just drag and drop either directly from the Item tab or a Compendium.  The system will pull the WEBM file that shares the same root filename as the assigned WEBP icon and create a Tile at the drop location.  From there, use the Tile Controls (three boxes in the left toolbar) to move and edit the newly created Tile.  You can also create Tiles by drag and dropping the WEBM files from the Tile Browser window by navigating to systems/girl-by-moonlight/styles/assets/planets or systems/girl-by-moonlight/styles/assets/stars.  The Tile Browser window will only show the animated WEBP files, but the WEBP files will not animate on the canvas, so be sure to drag and drop the WEBM file directly before the desired WEBP file in the Browser.
+To place an animated icon of your planet or sun onto the canvas, just drag and drop either directly from the Item tab or a Compendium.  The system will pull the WEBM file that shares the same root filename as the assigned WEBP icon and create a Tile at the drop location.  From there, use the Tile Controls (three boxes in the left toolbar) to move and edit the newly created Tile.  You can also create Tiles by drag and dropping the WEBM files from the Tile Browser window by navigating to systems/scum-and-villainy/styles/assets/planets or systems/scum-and-villainy/styles/assets/stars.  The Tile Browser window will only show the animated WEBP files, but the WEBP files will not animate on the canvas, so be sure to drag and drop the WEBM file directly before the desired WEBP file in the Browser.
 
 ## Recommended Modules
 
@@ -34,9 +34,9 @@ To place an animated icon of your planet or sun onto the canvas, just drag and d
 - Pointers and Pings
 - Tabletop RPG Music (some good sci-fi ambience)
 - For full-system Brazilian Portuguese language translation from brunocalado
-  https://github.com/brunocalado/girl-by-moonlight-pt-br
+  https://github.com/brunocalado/scum-and-villainy-pt-br
 - For full-system Spanish language translation from jesberpen
-  https://github.com/jesberpen/girl-by-moonlight-es-es
+  https://github.com/jesberpen/scum-and-villainy-es-es
   
 
 
@@ -102,7 +102,7 @@ Clock Tiles are useful for quick, disposable clocks you'd like to drop onto the 
 ## Credits
 - Initial system forked from megastruktur's Blades in the Dark
 - Clock UI is adapted from the Clocks module by TyrannosaurusRoy (troygoode) under the MIT license
-- This work is based on Scum and Villainy (http://offguardgames.com/girl-by-moonlight/), a product of Off Guard Games (https://offguardgames.com/) and designed by John LeBoeuf-Little and Stras Acimovic (expressly approved by Stras).
+- This work is based on Scum and Villainy (http://offguardgames.com/scum-and-villainy/), a product of Off Guard Games (https://offguardgames.com/) and designed by John LeBoeuf-Little and Stras Acimovic (expressly approved by Stras).
 - Scum and Villainy is based on Blades in the Dark (found at http://www.bladesinthedark.com/), product of One Seven Design, developed and authored by John Harper, and licensed for use under the Creative Commons Attribution 3.0 Unported license (http://creativecommons.org/licenses/by/3.0/).
 - Some assets were taken/adapted from here (thank you to timdenee and joesinghaus): https://github.com/joesinghaus/Blades-in-the-Dark
 

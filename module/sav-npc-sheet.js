@@ -11,8 +11,8 @@ export class SaVNPCSheet extends SaVSheet {
   /** @override */
   static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: [ "girl-by-moonlight", "sheet", "actor" ],
-  	  template: "systems/girl-by-moonlight/templates/npc-sheet.html",
+  	  classes: [ "scum-and-villainy", "sheet", "actor" ],
+  	  template: "systems/scum-and-villainy/templates/npc-sheet.html",
       width: 800,
       height: 970,
 	    scrollY: [".description"]

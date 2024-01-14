@@ -1,18 +1,18 @@
 //import DND5E from "./dnd5e.js";
 //import BitD from "./blades-in-the-dark.js";
-import SaV from "./girl-by-moonlight.js";
+import SaV from "./scum-and-villainy.js";
 
 const SUPPORTED_SYSTEMS = {
   //"blades-in-the-dark": BitD,
   //"dnd5e": DND5E,
-  "girl-by-moonlight": SaV
+  "scum-and-villainy": SaV
 };
 
 const defaultLoadClockFromActor = ({ actor }) => {
   return {
-    progress: actor.getFlag("girl-by-moonlight", "clocks.progress"),
-    size: actor.getFlag("girl-by-moonlight", "clocks.size"),
-    theme: actor.getFlag("girl-by-moonlight", "clocks.theme")
+    progress: actor.getFlag("scum-and-villainy", "clocks.progress"),
+    size: actor.getFlag("scum-and-villainy", "clocks.size"),
+    theme: actor.getFlag("scum-and-villainy", "clocks.theme")
   };
 };
 
@@ -21,14 +21,14 @@ const defaultLoadClockFromItem = ({ item }) => {
   return {
     progress: item.data.data.goal_clock.value,
     size: item.data.data.goal_clock.max,
-    theme: game.system.savclocks.themes[game.settings.get("girl-by-moonlight", "defaultClockTheme")]
+    theme: game.system.savclocks.themes[game.settings.get("scum-and-villainy", "defaultClockTheme")]
   };
 };
 
 const defaultPersistClockToActor = async ({ clock }) => {
   return {
     flags: {
-      "girl-by-moonlight": {
+      "scum-and-villainy": {
 	    clocks: {
           progress: clock.progress,
           size: clock.size,

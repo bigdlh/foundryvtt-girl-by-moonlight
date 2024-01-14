@@ -22,12 +22,12 @@ export class SaVItem extends Item {
      }
 
 		if ( this.type === "star_system" ) {
-      let stars = await SaVHelpers.getFiles("systems/girl-by-moonlight/styles/assets/stars/star*", ".webp", true);
+      let stars = await SaVHelpers.getFiles("systems/scum-and-villainy/styles/assets/stars/star*", ".webp", true);
       let random = Math.floor( Math.random() * stars.length ) + 1;
       this.updateSource( { img: stars[random] } );
     }
 		if ( this.type === "planet" ) {
-      let planets = await SaVHelpers.getFiles("systems/girl-by-moonlight/styles/assets/planets/planet*", ".webp", true);
+      let planets = await SaVHelpers.getFiles("systems/scum-and-villainy/styles/assets/planets/planet*", ".webp", true);
       let random = Math.floor( Math.random() * planets.length ) + 1;
       this.updateSource( { img: planets[random] } );
     }
@@ -48,7 +48,7 @@ export class SaVItem extends Item {
            await SaVHelpers.addDefaultAbilities( data, actor );
          }
 
-         if( ( ( data.type === "class" ) || ( data.type === "crew_type" ) ) && ( ( actor.img.slice( 0, 46 ) === "systems/girl-by-moonlight/styles/assets/icons/" ) || ( actor.img === "icons/svg/mystery-man.svg" ) ) ) {
+         if( ( ( data.type === "class" ) || ( data.type === "crew_type" ) ) && ( ( actor.img.slice( 0, 46 ) === "systems/scum-and-villainy/styles/assets/icons/" ) || ( actor.img === "icons/svg/mystery-man.svg" ) ) ) {
            const icon = data.img;
            const icon_update = {
              img: icon,
@@ -91,7 +91,7 @@ export class SaVItem extends Item {
     if (itemData.img.includes("/mystery-man")) {
       itemData.img = null;
     }
-    const html = await renderTemplate("systems/girl-by-moonlight/templates/items/chat-item.html", itemData);
+    const html = await renderTemplate("systems/scum-and-villainy/templates/items/chat-item.html", itemData);
     const chatData = {
       user: game.userId,
       content: html,

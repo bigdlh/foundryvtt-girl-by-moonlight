@@ -17,24 +17,24 @@ export class SaVActor extends Actor {
       let icon, token, size;
       switch( data.type ) {
         case "universe": {
-          icon = "systems/girl-by-moonlight/styles/assets/icons/galaxy.png";
+          icon = "systems/scum-and-villainy/styles/assets/icons/galaxy.png";
           break;
         }
         case "ship": {
-          icon = "systems/girl-by-moonlight/styles/assets/icons/ufo.png";
+          icon = "systems/scum-and-villainy/styles/assets/icons/ufo.png";
           break;
         }
         case "character":
         case "npc": {
-          icon = "systems/girl-by-moonlight/styles/assets/icons/astronaut-helmet.png";
+          icon = "systems/scum-and-villainy/styles/assets/icons/astronaut-helmet.png";
           break;
         }
         case "\uD83D\uDD5B clock": {
-          icon = "systems/girl-by-moonlight/themes/blue/4clock_0.webp";
+          icon = "systems/scum-and-villainy/themes/blue/4clock_0.webp";
           break;
         }
           case "faction-status": {
-          icon = "systems/girl-by-moonlight/styles/assets/icons/Icon.6_62.png";
+          icon = "systems/scum-and-villainy/styles/assets/icons/Icon.6_62.png";
           break;
         }
       }
@@ -62,8 +62,8 @@ export class SaVActor extends Actor {
     const updateData = {};
 
     if( createData.type === "character" ) {
-      const playbookXP = game.settings.get( "girl-by-moonlight", "defaultPlaybookXPBarSize" );
-      const attributeXP = game.settings.get( "girl-by-moonlight", "defaultAttributeXPBarSize" );
+      const playbookXP = game.settings.get( "scum-and-villainy", "defaultPlaybookXPBarSize" );
+      const attributeXP = game.settings.get( "scum-and-villainy", "defaultAttributeXPBarSize" );
 
       if( playbookXP ) {
         updateData['system.experienceMax'] = playbookXP;
@@ -80,7 +80,7 @@ export class SaVActor extends Actor {
     }
 
     if( createData.type === "ship" ) {
-      const crewXP = game.settings.get( "girl-by-moonlight", "defaultCrewXPBarSize" );
+      const crewXP = game.settings.get( "scum-and-villainy", "defaultCrewXPBarSize" );
 
       if( crewXP ) {
         updateData['system.crew_experienceMax'] = crewXP;
@@ -137,7 +137,7 @@ export class SaVActor extends Actor {
 	      for (const a in this.system.attributes) {
           dice_amount[a] = 0;
 		      // Add +1d to resistance rolls only for Forged item on ship
-		      let ship_actors = this.getFlag("girl-by-moonlight", "ship") || [];
+		      let ship_actors = this.getFlag("scum-and-villainy", "ship") || [];
           let actor = game.actors.get( ship_actors[0]?._id );
 		      if (actor?.system.installs.forged_inst === 1) {
 		        dice_amount[a]++;
@@ -193,7 +193,7 @@ export class SaVActor extends Actor {
 
 
 
-    let dropdowns = game.settings.get("girl-by-moonlight", "useDropdownsInRollDialog");
+    let dropdowns = game.settings.get("scum-and-villainy", "useDropdownsInRollDialog");
 
     if( dropdowns ) {
       new Dialog( {

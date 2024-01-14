@@ -57,7 +57,7 @@ export class SaVSheet extends ActorSheet {
 		html += `<div class="flex one">${game.i18n.localize("BITD.Info")}</div>`;
 		html += `</label>`;
 
-		let ship_actors = this.actor.getFlag("girl-by-moonlight", "ship") || [];
+		let ship_actors = this.actor.getFlag("scum-and-villainy", "ship") || [];
 		let actor = game.actors.get( ship_actors[0]?._id );
 
 	  let stun_weapons = 0;
@@ -289,7 +289,7 @@ async _onFlagAddClick(event) {
     });
 
     if ( this.actor.isOwner ) {
-	    await this.actor.setFlag("girl-by-moonlight", item_type, items_to_add);
+	    await this.actor.setFlag("scum-and-villainy", item_type, items_to_add);
 	  }
   }
 

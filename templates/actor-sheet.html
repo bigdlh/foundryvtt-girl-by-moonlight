@@ -9,6 +9,21 @@
 
 		    <div class="item-block flex-horizontal">
           <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "BITD.Class"}}</a></div>
+          {{#each items as |item id|}}
+            {{#if (eq item.type "class")}}
+              <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                <div class="item-body flex-horizontal">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                  <div class="tooltip">
+                    <a class="item-name">{{item.name}}</a>
+                    <span class="tooltiptext">{{{item.system.description}}}<br />{{localize "BITD.ClassExpClueDescription"}}<br />{{localize "BITD.ClassExpClue2"}}<br />{{localize "BITD.ClassExpClue3"}}<br />{{item.system.experience_clues}}</span>
+                  </div>
+                </div>
+                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              </div>
+            {{/if}}
+          {{/each}}
           </div>
           <div class="item-block flex-horizontal">
             <div class="item-class-label">
@@ -312,7 +327,7 @@
           <div class="label-stripe">
             <p>{{localize "BITD.Effects"}}</p>
           </div>
-          {{> "systems/girl-by-moonlight/templates/parts/active-effects.html"}}
+          {{> "systems/scum-and-villainy/templates/parts/active-effects.html"}}
         </div>
       {{/if}}
 
@@ -335,7 +350,7 @@
 
     </div>
     {{!-- Attributes --}}
-    {{> "systems/girl-by-moonlight/templates/parts/attributes.html" actor=this}}
+    {{> "systems/scum-and-villainy/templates/parts/attributes.html" actor=this}}
   </section>
 
 </form>

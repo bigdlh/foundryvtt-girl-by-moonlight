@@ -12,8 +12,8 @@ export class SaVActorSheet extends SaVSheet {
   /** @override */
   static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: [ "girl-by-moonlight", "sheet", "actor" ],
-  	  template: "systems/girl-by-moonlight/templates/actor-sheet.html",
+  	  classes: [ "scum-and-villainy", "sheet", "actor" ],
+  	  template: "systems/scum-and-villainy/templates/actor-sheet.html",
       width: 800,
       height: 970,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}],
@@ -35,17 +35,13 @@ export class SaVActorSheet extends SaVSheet {
     // Prepare active effects
     sheetData.effects = prepareActiveEffectCategories( this.document.effects );
 
-    let ship_actors = this.actor.getFlag("girl-by-moonlight", "ship") || [];
-    let shipActor = game.actors.get( ship_actors[0]?.id );
-    // If assigned ship no longer exists, remove from flags
-    if( shipActor === undefined ) { this.actor.setFlag("girl-by-moonlight", "ship", ""); }
-    sheetData.shipActor = [shipActor];
-
     // Encumbrance Levels
     let load_level = [ "BITD.Empty","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Heavy", "BITD.Heavy","BITD.OverMax","BITD.OverMax" ];
     let mule_level = [ "BITD.Empty","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Heavy", "BITD.Heavy","BITD.OverMax" ];
 
 	  //look for abilities in assigned ship flags and set actor results
+
+
 	  //set encumbrance level
     if ( sheetData.system.loadout.heavy > sheetData.system.loadout.heavy_default ) {
       sheetData.system.loadout.load_level = mule_level[ sheetData.system.loadout.current ];
@@ -93,11 +89,11 @@ export class SaVActorSheet extends SaVSheet {
     });
 
     // Lifestyle Roll
-    html.find('.lifestyle').click( async (ev) => {
-      const element = $(ev.currentTarget);
-      const coins = element.data("rollValue");
-      await lifestyleRollPopup( coins );
-    });
+//    html.find('.lifestyle').click( async (ev) => {
+//      const element = $(ev.currentTarget);
+//      const coins = element.data("rollValue");
+//      await lifestyleRollPopup( coins );
+//    });
 
 	  // Render XP Triggers sheet
     html.find('.xp-triggers').click(ev => {
@@ -116,7 +112,7 @@ export class SaVActorSheet extends SaVSheet {
 	  // Clear Flag
 	  html.find('.flag-delete').click( async (ev) => {
       const element = $(ev.currentTarget).parents(".item");
-      await this.actor.setFlag("girl-by-moonlight", element.data("itemType"), "");
+      await this.actor.setFlag("scum-and-villainy", element.data("itemType"), "");
       element.slideUp(200, () => this.render(false));
 	  });
 

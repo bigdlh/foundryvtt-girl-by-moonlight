@@ -10,7 +10,7 @@ export class SaVItemSheet extends ItemSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["girl-by-moonlight", "sheet", "item"],
+			classes: ["scum-and-villainy", "sheet", "item"],
 			width: 900,
 			height: 'auto',
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
@@ -38,7 +38,7 @@ export class SaVItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/girl-by-moonlight/templates/items";
+    const path = "systems/scum-and-villainy/templates/items";
     let simple_item_types = ["background", "heritage", "vice", "crew_reputation", "ship_size"];
     let template_name = `${this.item.type}`;
 

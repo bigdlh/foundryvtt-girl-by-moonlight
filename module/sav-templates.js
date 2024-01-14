@@ -9,9 +9,9 @@ export const preloadHandlebarsTemplates = async function() {
   const templatePaths = [
 
     // Actor Sheet Partials
-    "systems/girl-by-moonlight/templates/parts/coins.html",
-    "systems/girl-by-moonlight/templates/parts/attributes.html",
-    "systems/girl-by-moonlight/templates/parts/active-effects.html",
+    "systems/scum-and-villainy/templates/parts/coins.html",
+    "systems/scum-and-villainy/templates/parts/attributes.html",
+    "systems/scum-and-villainy/templates/parts/active-effects.html",
   ];
 
   // Load the template parts
