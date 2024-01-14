@@ -1,5 +1,5 @@
 {
-  "id": "girl-by-moonlight",
+  "id": "scum-and-villainy",
   "title": "Girl-by-Moonlight",
   "description": "Girl-by-Moonlight game system.",
   "authors": [
@@ -16,8 +16,8 @@
     "verified": "11.315"
   },
   "relationships": [],
-  "manifest": "https://github.com/bigdlh/Girl-by-Moonlight/releases/latest/download/system.json",
-  "download": "https://github.com/bigdlh/Girl-by-Moonlight/releases/download/0.7.1/system.zip",
+  "manifest": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/tag/1.0/system.json",
+  "download": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/tag/1.0/system.zip",
   "initiative": "1d20",
   "esmodules": [
     "module/sav.js"
@@ -38,7 +38,7 @@
     {
       "name": "class",
       "label": "Classes",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/classes",
       "type": "Item",
       "ownership": {
@@ -50,7 +50,7 @@
     {
       "name": "heritage",
       "label": "Heritages",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/heritages",
       "type": "Item",
       "ownership": {
@@ -62,7 +62,7 @@
     {
       "name": "vice",
       "label": "Vices",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/vices",
       "type": "Item",
       "ownership": {
@@ -74,7 +74,7 @@
     {
       "name": "background",
       "label": "Backgrounds",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/backgrounds",
       "type": "Item",
       "ownership": {
@@ -86,7 +86,7 @@
     {
       "name": "item",
       "label": "Items",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/items",
       "type": "Item",
       "ownership": {
@@ -98,7 +98,7 @@
     {
       "name": "ability",
       "label": "Abilities",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/abilities",
       "type": "Item",
       "ownership": {
@@ -110,7 +110,7 @@
     {
       "name": "crew_reputation",
       "label": "Crew Reputation",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/crew_reputation",
       "type": "Item",
       "ownership": {
@@ -122,7 +122,7 @@
     {
       "name": "crew_type",
       "label": "Ship Types",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/crew_types",
       "type": "Item",
       "ownership": {
@@ -134,7 +134,7 @@
     {
       "name": "crew_upgrade",
       "label": "Ship Upgrades",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/crew_upgrades",
       "type": "Item",
       "ownership": {
@@ -146,7 +146,7 @@
     {
       "name": "crew_ability",
       "label": "Ship Abilities",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/crew_abilities",
       "type": "Item",
       "ownership": {
@@ -158,7 +158,7 @@
     {
       "name": "job_tables",
       "label": "Job Tables",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/tables",
       "type": "RollTable",
       "ownership": {
@@ -170,7 +170,7 @@
     {
       "name": "star_system",
       "label": "Star Systems",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/star_systems",
       "type": "Item",
       "ownership": {
@@ -182,7 +182,7 @@
     {
       "name": "planet",
       "label": "Planets",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/planets",
       "type": "Item",
       "ownership": {
@@ -194,7 +194,7 @@
     {
       "name": "faction",
       "label": "Factions",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/factions",
       "type": "Item",
       "ownership": {
@@ -206,7 +206,7 @@
     {
       "name": "ship_size",
       "label": "Ship Sizes",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/size",
       "type": "Item",
       "ownership": {
@@ -218,7 +218,7 @@
     {
       "name": "wanted",
       "label": "Wanted Consequences",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/wanted-consequences",
       "type": "JournalEntry",
       "ownership": {
@@ -230,7 +230,7 @@
     {
       "name": "wanted_tables",
       "label": "Wanted Tables",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/wanted-tables",
       "type": "RollTable",
       "ownership": {
@@ -242,7 +242,7 @@
     {
       "name": "macros",
       "label": "System Macros",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
@@ -254,7 +254,7 @@
     {
       "name": "friend",
       "label": "Friends",
-      "system": "girl-by-moonlight",
+      "system": "scum-and-villainy",
       "path": "packs/friends",
       "type": "Item",
       "ownership": {

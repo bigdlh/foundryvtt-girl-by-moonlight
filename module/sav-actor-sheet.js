@@ -46,41 +46,6 @@ export class SaVActorSheet extends SaVSheet {
     let mule_level = [ "BITD.Empty","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Heavy", "BITD.Heavy","BITD.OverMax" ];
 
 	  //look for abilities in assigned ship flags and set actor results
-
-	  if ( shipActor?.system.installs.loaded_inst === 1 ) {
-	    sheetData.system.loadout.heavy++;
-      sheetData.system.loadout.normal++;
-      sheetData.system.loadout.light++;
-    } else {
-      sheetData.system.loadout.heavy = sheetData.system.loadout.heavy_default;
-      sheetData.system.loadout.normal = sheetData.system.loadout.normal_default;
-      sheetData.system.loadout.light = sheetData.system.loadout.light_default;
-	  }
-
-	  if ( shipActor?.system.installs.stress_max_up === 1 ) {
-      sheetData.system.stress.max++;
-    } else {
-      sheetData.system.stress.max = sheetData.system.stress.max_default;
-  	}
-
-	  if ( shipActor?.system.installs.trauma_max_up === 1 ) {
-      sheetData.system.trauma.max++;
-    } else {
-      sheetData.system.trauma.max = sheetData.system.trauma.max_default;
-  	}
-
-	  if ( shipActor?.system.installs.stun_inst === 1 ) {
-      sheetData.system.stun_weapons = 1;
-	  } else {
-      sheetData.system.stun_weapons = 0;
-	  }
-
-	  if ( shipActor?.system.installs.forged_inst === 1 ) {
-      sheetData.system.forged = 1;
-	  } else {
-      sheetData.system.forged = 0;
-	  }
-
 	  //set encumbrance level
     if ( sheetData.system.loadout.heavy > sheetData.system.loadout.heavy_default ) {
       sheetData.system.loadout.load_level = mule_level[ sheetData.system.loadout.current ];
