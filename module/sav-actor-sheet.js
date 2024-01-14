@@ -35,12 +35,51 @@ export class SaVActorSheet extends SaVSheet {
     // Prepare active effects
     sheetData.effects = prepareActiveEffectCategories( this.document.effects );
 
+    let ship_actors = this.actor.getFlag("scum-and-villainy", "ship") || [];
+    let shipActor = game.actors.get( ship_actors[0]?.id );
+    // If assigned ship no longer exists, remove from flags
+    if( shipActor === undefined ) { this.actor.setFlag("scum-and-villainy", "ship", ""); }
+    sheetData.shipActor = [shipActor];
+
     // Encumbrance Levels
     let load_level = [ "BITD.Empty","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Heavy", "BITD.Heavy","BITD.OverMax","BITD.OverMax" ];
     let mule_level = [ "BITD.Empty","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Heavy", "BITD.Heavy","BITD.OverMax" ];
 
 	  //look for abilities in assigned ship flags and set actor results
 
+	  if ( shipActor?.system.installs.loaded_inst === 1 ) {
+	    sheetData.system.loadout.heavy++;
+      sheetData.system.loadout.normal++;
+      sheetData.system.loadout.light++;
+    } else {
+      sheetData.system.loadout.heavy = sheetData.system.loadout.heavy_default;
+      sheetData.system.loadout.normal = sheetData.system.loadout.normal_default;
+      sheetData.system.loadout.light = sheetData.system.loadout.light_default;
+	  }
+
+	  if ( shipActor?.system.installs.stress_max_up === 1 ) {
+      sheetData.system.stress.max++;
+    } else {
+      sheetData.system.stress.max = sheetData.system.stress.max_default;
+  	}
+
+	  if ( shipActor?.system.installs.trauma_max_up === 1 ) {
+      sheetData.system.trauma.max++;
+    } else {
+      sheetData.system.trauma.max = sheetData.system.trauma.max_default;
+  	}
+
+	  if ( shipActor?.system.installs.stun_inst === 1 ) {
+      sheetData.system.stun_weapons = 1;
+	  } else {
+      sheetData.system.stun_weapons = 0;
+	  }
+
+	  if ( shipActor?.system.installs.forged_inst === 1 ) {
+      sheetData.system.forged = 1;
+	  } else {
+      sheetData.system.forged = 0;
+	  }
 
 	  //set encumbrance level
     if ( sheetData.system.loadout.heavy > sheetData.system.loadout.heavy_default ) {
@@ -89,11 +128,11 @@ export class SaVActorSheet extends SaVSheet {
     });
 
     // Lifestyle Roll
-//    html.find('.lifestyle').click( async (ev) => {
-//      const element = $(ev.currentTarget);
-//      const coins = element.data("rollValue");
-//      await lifestyleRollPopup( coins );
-//    });
+    html.find('.lifestyle').click( async (ev) => {
+      const element = $(ev.currentTarget);
+      const coins = element.data("rollValue");
+      await lifestyleRollPopup( coins );
+    });
 
 	  // Render XP Triggers sheet
     html.find('.xp-triggers').click(ev => {
