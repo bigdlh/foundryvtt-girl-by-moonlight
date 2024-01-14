@@ -9,8 +9,8 @@ export class SaVUniverseSheet extends SaVSheet {
   /** @override */
 	static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["scum-and-villainy", "sheet", "actor"],
-  	  template: "systems/scum-and-villainy/templates/universe-sheet.html",
+  	  classes: ["girl-by-moonlight", "sheet", "actor"],
+  	  template: "systems/girl-by-moonlight/templates/universe-sheet.html",
       width: 800,
       height: 'auto',
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content"}]

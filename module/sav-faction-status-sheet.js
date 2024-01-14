@@ -7,8 +7,8 @@ export class SaVFactionStatusSheet extends SaVSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["scum-and-villainy", "sheet", "actor", "fs-faction-dialog"],
-      template: "systems/scum-and-villainy/templates/faction-status-sheet.hbs",
+      classes: ["girl-by-moonlight", "sheet", "actor", "fs-faction-dialog"],
+      template: "systems/girl-by-moonlight/templates/faction-status-sheet.hbs",
       width: 1280,
       height: "auto",
       resizable: false,
@@ -74,7 +74,7 @@ export class SaVFactionStatusSheet extends SaVSheet {
     });
 
     if (this.actor.isOwner) {
-      await this.actor.setFlag("scum-and-villainy", item_type, items_to_add);
+      await this.actor.setFlag("girl-by-moonlight", item_type, items_to_add);
     }
   }
 

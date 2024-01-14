@@ -48,7 +48,7 @@ export const migrateWorld = async function() {
   }
 
   // Set the migration as complete
-  await game.settings.set("scum-and-villainy", "systemMigrationVersion", game.system.version);
+  await game.settings.set("girl-by-moonlight", "systemMigrationVersion", game.system.version);
   ui.notifications.info(`SaV System Migration to version ${game.system.version} completed!`, {permanent: true});
 };
 

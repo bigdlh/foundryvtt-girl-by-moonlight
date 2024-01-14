@@ -3,7 +3,7 @@ export const registerSystemSettings = function() {
   /**
    * Track the system version upon which point a migration was last applied
    */
-  game.settings.register("scum-and-villainy", "systemMigrationVersion", {
+  game.settings.register("girl-by-moonlight", "systemMigrationVersion", {
     name: "System Migration Version",
     scope: "world",
     config: false,
@@ -11,7 +11,7 @@ export const registerSystemSettings = function() {
     default: 0
   });
 
-  game.settings.register("scum-and-villainy", "defaultClockTheme", {
+  game.settings.register("girl-by-moonlight", "defaultClockTheme", {
     name: "BITD.ClockSettingDefaultTheme",
     hint: "BITD.ClockSettingDefaultThemeHint",
     scope: "world",
@@ -22,7 +22,7 @@ export const registerSystemSettings = function() {
 	  icon: "fas fa-palette"
   });
 
-  game.settings.register("scum-and-villainy", "defaultAttributeXPBarSize", {
+  game.settings.register("girl-by-moonlight", "defaultAttributeXPBarSize", {
     name: "BITD.AttributeXPBarSize",
     hint: "BITD.AttributeXPBarSizeHint",
     scope: "world",
@@ -36,7 +36,7 @@ export const registerSystemSettings = function() {
     default: 6
   });
 
-  game.settings.register("scum-and-villainy", "defaultPlaybookXPBarSize", {
+  game.settings.register("girl-by-moonlight", "defaultPlaybookXPBarSize", {
     name: "BITD.PlaybookXPBarSize",
     hint: "BITD.PlaybookXPBarSizeHint",
     scope: "world",
@@ -50,7 +50,7 @@ export const registerSystemSettings = function() {
     default: 8
   });
 
-  game.settings.register("scum-and-villainy", "defaultCrewXPBarSize", {
+  game.settings.register("girl-by-moonlight", "defaultCrewXPBarSize", {
     name: "BITD.CrewXPBarSize",
     hint: "BITD.CrewXPBarSizeHint",
     scope: "world",
@@ -64,7 +64,7 @@ export const registerSystemSettings = function() {
     default: 8
   });
 
-  game.settings.register("scum-and-villainy", "logResourceToChat", {
+  game.settings.register("girl-by-moonlight", "logResourceToChat", {
     name: "BITD.LogResourceToChat",
     hint: "BITD.LogResourceToChatHint",
     scope: "world",
@@ -73,7 +73,7 @@ export const registerSystemSettings = function() {
     default: true
   });
 
-  game.settings.register("scum-and-villainy", "useDropdownsInRollDialog", {
+  game.settings.register("girl-by-moonlight", "useDropdownsInRollDialog", {
     name: "BITD.UseDropdownsInRollDialog",
     hint: "BITD.UseDropdownsInRollDialogHint",
     scope: "client",
