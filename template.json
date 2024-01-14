@@ -1,0 +1,455 @@
+{
+"Actor": {
+  "types": ["character", "npc", "ship", "\uD83D\uDD5B clock", "universe","faction-status"],
+  "character": {
+    "alias": "",
+	  "look": "",
+    "name2": "",
+    "role":"",
+    "background":"",
+    "obligation":"",
+    "description": "",
+    "character_class": "",
+    "isTranscendent": false,
+    "link0": {
+      "value": 2,
+      "max": 6,
+      "max_default": 6
+    },
+    "link1": {
+      "value": [0],
+      "max": 6,
+      "max_default": 6
+    },
+    "link2": {
+      "value": [0],
+      "max": 6,
+      "max_default": 6
+    },
+    "link3": {
+      "value": [0],
+      "max": 6,
+      "max_default": 6
+    },
+    "link4": {
+      "value": [0],
+      "max": 6,
+      "max_default": 6
+    },
+    "link5": {
+      "value": [0],
+      "max": 6,
+      "max_default": 6
+    },
+    "stress": {
+      "value": [0],
+      "max": 9,
+      "max_default": 9,
+      "name": "BITD.Stress"
+    },
+    "trauma": {
+      "max": 4,
+      "max_default": 4,
+      "value": "0",
+      "name": "BITD.Trauma",
+      "list": [0]
+    },
+    "transcendence": {
+      "value": [0],  
+      "max": 4,
+      "max_default": 4,
+      "name": "BITD.Transcendence"
+    },
+    "healing-clock": [0],
+    "healing-clockMax": 4,
+    "experience": [0],
+    "experienceMax": 8,
+    "coins": [0],
+    "coins_stashed": [0],
+    "special_abilities": [],
+    "loadout": {
+  	  "current": 0,
+  	  "planned": [0],
+  	  "heavy": 8,
+      "heavy_default": 8,
+  	  "normal": 5,
+      "normal_default": 5,
+  	  "light": 3,
+      "light_default": 3,
+  	  "load_level": ""
+  	},
+	  "stun_weapons": 0,
+	  "forged": 0,
+    "harm": {
+      "light": {
+        "one": "",
+        "two": ""
+      },
+      "medium": {
+        "one": "",
+        "two": ""
+      },
+      "heavy": {
+        "one": ""
+      },
+      "deadly": {
+        "one": ""
+      }
+    },
+    "armor-uses": {
+      "armor": 0,
+      "special": 0
+    },
+    "attributes": {
+      "insight": {
+        "exp": [0],
+        "expMax": 6,
+        "label": "BITD.SkillsSun",
+	    "tip": "BITD.SkillsSunTip",
+        "skills": {
+          "defy": {
+            "label": "BITD.SkillsDefy",
+            "tip": "BITD.SkillsDefyTip",
+            "value": [0],
+            "max": 4
+          },
+          "empathise": {
+            "label": "BITD.SkillsEmpathise",
+	        "tip": "BITD.SkillsEmpathiseTip",
+            "value": [0],
+            "max": 4
+          },
+          "express": {
+            "label": "BITD.SkillsExpress",
+	        "tip": "BITD.SkillsExpressTip",
+            "value": [0],
+            "max": 4
+          }
+        }
+      },
+      "moon": {
+        "exp": [0],
+        "expMax": 6,
+        "label": "BITD.SkillsMoon",
+	    "tip": "BITD.SkillsMoonTip",
+        "skills": {
+          "confess": {
+            "label": "BITD.SkillsConfess",
+            "tip": "BITD.SkillsConfessTip",
+            "value": [0],
+            "max": 4
+          },
+          "forgive": {
+            "label": "BITD.SkillsForgive",
+	        "tip": "BITD.SkillsForgiveTip",
+            "value": [0],
+            "max": 4
+          },
+          "perceive": {
+            "label": "BITD.SkillsPerceive",
+	        "tip": "BITD.SkillsPerceiveTip",
+            "value": [0],
+            "max": 4
+          }
+        }
+      },
+      "stars": {
+        "exp": [0],
+        "expMax": 6,
+        "label": "BITD.SkillsStars",
+	    "tip": "BITD.SkillsStarsTip",
+        "skills": {
+          "analyze": {
+            "label": "BITD.SkillsAnalyze",
+	        "tip": "BITD.SkillsAnalyzeTip",
+            "value": [0],
+            "max": 4
+          },
+          "conceal": {
+            "label": "BITD.SkillsConceal",
+	        "tip": "BITD.SkillsConcealTip",
+            "value": [0],
+            "max": 4
+          },
+          "consort": {
+            "label": "BITD.SkillsFlow",
+	        "tip": "BITD.SkillsFlowTip",
+            "value": [0],
+            "max": 4
+          }
+        }
+      }
+    }
+  },
+  "npc": {
+    "faction": "",
+    "tier": "",
+    "description": "",
+    "notes": "",
+    "goal_clock": {
+      "value": "0",
+      "max": "4"
+    }
+  },
+  "ship": {
+    "name": "",
+    "look": "",
+    "description": "",
+  	"designation": "",
+    "size": "",
+    "coins": "0",
+    "debt": "0",
+    "coinsMax": 4,
+    "vault": [0],
+    "debt-clock": [0],
+  	"crew_experience": "0",
+    "crew_experienceMax": 8,
+  	"ship_class": "",
+    "gambits": {
+      "refresh": 0,
+      "max": 8,
+      "value": "0"
+    },
+    "installs": {
+  		"vault_inst": 0,
+  		"stun_inst": 0,
+  		"stress_max_up": 0,
+  		"trauma_max_up": 0,
+  		"cooking_inst": 0,
+  		"loaded_inst": 0,
+  		"forged_inst": 0
+  	},
+  	"systems": {
+      "crew": {
+  	    "label": "BITD.SystemsCrew",
+	    "tip": "BITD.SkillsCrewTip",
+        "value": "0",
+        "damage": "0",
+        "max": 3
+      },
+      "upkeep": {
+        "label": "BITD.SystemsUpkeep",
+	    "tip": "BITD.SkillsUpkeepTip",
+        "value": 0,
+        "damage": "0",
+        "max": 4
+      },
+      "engines": {
+        "label": "BITD.SystemsEngines",
+	    "tip": "BITD.SkillsEnginesTip",
+        "value": "0",
+        "damage": "0",
+        "max": 4
+      },
+      "hull": {
+        "label": "BITD.SystemsHull",
+	    "tip": "BITD.SkillsHullTip",
+        "value": "0",
+        "damage": "0",
+        "max": 4
+      },
+      "shields": {
+        "label": "BITD.SystemsShields",
+	    "tip": "BITD.SkillsShieldsTip",
+  	    "value": "1",
+        "damage": "0",
+        "max": 0
+      },
+      "comms": {
+        "label": "BITD.SystemsComms",
+	    "tip": "BITD.SkillsCommsTip",
+        "value": "0",
+        "damage": "0",
+        "max": 4
+      },
+      "encryptor": {
+        "label": "BITD.SystemsEncryptor",
+	    "tip": "BITD.SkillsEncryptorTip",
+  	    "value": "1",
+        "damage": "0",
+  	    "max": 0
+      },
+      "weapons": {
+        "label": "BITD.SystemsWeapons",
+	    "tip": "BITD.SkillsWeaponsTip",
+        "value": "0",
+        "damage": "0",
+        "max": 4
+      }
+    }
+  },
+  "\uD83D\uDD5B clock": {
+    "name": "",
+    "type": 4,
+    "value": "0"
+  },
+  "universe": {
+  	"name": ""
+  },
+    "faction-status": {
+  	"name": ""
+  }
+},
+"Item": {
+  "types": ["item", "class", "ability", "heritage", "background", "vice", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "star_system", "planet", "faction", "ship_size", "friend"],
+  "templates": {
+    "default": {
+      "description": "",
+      "visible": true
+    },
+    "ability": {
+      "description": "",
+      "class": "",
+      "price": 1,
+      "starting": false,
+      "recommended": false
+    },
+    "logic": {
+      "logic": ""
+    },
+    "activatedEffect": {
+      "activation": {
+        "type": "",
+        "cost": 0,
+        "condition": ""
+      },
+      "duration": {
+        "value": null,
+        "units": ""
+      },
+      "target": {
+        "value": null,
+        "width": null,
+        "units": "",
+        "type": ""
+      },
+      "range": {
+        "value": null,
+        "long": null,
+        "units": ""
+      },
+      "uses": {
+        "value": 0,
+        "max": 0,
+        "per": null
+      },
+      "consume": {
+        "type": "",
+        "target": null,
+        "amount": null
+      }
+    }
+  },
+  "item": {
+    "templates": ["default", "logic", "activatedEffect"],
+    "class": "",
+    "load": 0
+  },
+  "friend": {
+    "templates": ["default", "logic", "activatedEffect"],
+    "value": [0],
+    "max": 6,
+    "max_default": 6,
+    "list": [0]
+  },
+  "class": {
+    "templates": ["default", "logic", "activatedEffect"],
+    "avatarVirtue": "",
+    "avatarDesire": "",
+    "eclipse": "",
+    "def_abilities": "",
+	"experience_clues": ""
+  },
+  "ability": {
+    "templates": ["ability", "logic", "activatedEffect"]
+  },
+  "heritage": {
+    "templates": ["default", "activatedEffect"]
+  },
+  "background": {
+    "templates": ["default", "activatedEffect"]
+  },
+  "vice": {
+    "templates": ["default", "activatedEffect"]
+  },
+  "crew_type": {
+    "templates": ["default", "logic", "activatedEffect"],
+	"def_abilities": "",
+	"experience_clues": ""
+  },
+  "crew_reputation": {
+    "templates": ["default"]
+  },
+  "crew_upgrade": {
+    "templates": ["ability", "logic", "activatedEffect"],
+	"crew_type": "",
+	"is_damaged": 0
+  },
+  "crew_ability": {
+    "templates": ["ability", "logic", "activatedEffect"],
+    "recommended": false
+  },
+  "star_system": {
+    "templates": ["default"],
+	"notables": "",
+	"heat": {
+      "value": [0],
+      "max": 8,
+      "max_default": 8,
+      "name_default": "BITD.Heat",
+      "name": "BITD.Heat"
+    },
+	"wanted": {
+      "value": [0],
+      "max": 4,
+      "max_default": 4,
+      "name_default": "BITD.Wanted",
+      "name": "BITD.Wanted"
+    }
+  },
+  "planet": {
+    "templates": ["default", "logic", "activatedEffect"],
+	"system": "",
+	"scene": "",
+	"notables": "",
+	"rule": "",
+	"wealth": 0,
+	"crime": 0,
+	"tech": 0,
+	"weird": 0
+  },
+  "faction": {
+    "templates": ["default"],
+	"type": "Weirdness",
+	"tier": "1",
+	"goal": "",
+	"turf": "",
+	"assets": "",
+	"quirks": "",
+	"notables": "",
+	"allies": "",
+	"enemies": "",
+	"situation": "",
+	"goal_clock": {
+      "value": "0",
+      "max": "4"
+    },
+	"status": {
+      "value": 4,
+      "max": 7,
+      "name": "BITD.Status"
+    },
+	"jobs": {
+      "value": [0],
+      "max": 3,
+      "name": "BITD.Jobs"
+    }
+  },
+  "ship_size": {
+    "templates": ["default", "logic", "activatedEffect"]
+  },
+	"status": {
+	  "value": [1]
+  }
+}
+}

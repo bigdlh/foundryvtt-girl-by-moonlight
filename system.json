@@ -1,0 +1,271 @@
+{
+  "id": "scum-and-villainy",
+  "title": "Scum and Villainy",
+  "description": "Scum and Villainy game system.",
+  "authors": [
+    {
+      "name": "Andrew Garinger",
+      "discord": "agaringer#6498",
+      "flags": {}
+    },
+    {
+      "name": "megastruktur",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/drewg13/foundryvtt-scum-and-villainy",
+  "version": "2.2.2",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11.315"
+  },
+  "relationships": [],
+  "manifest": "https://github.com/drewg13/foundryvtt-scum-and-villainy/releases/latest/download/system.json",
+  "download": "https://github.com/drewg13/foundryvtt-scum-and-villainy/releases/download/2.2.2/system.zip",
+  "initiative": "1d20",
+  "esmodules": [
+    "module/sav.js"
+  ],
+  "styles": [
+    "styles/sav.css",
+    "styles/hide-ui.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "packs": [
+    {
+      "name": "class",
+      "label": "Classes",
+      "system": "scum-and-villainy",
+      "path": "packs/classes",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "heritage",
+      "label": "Heritages",
+      "system": "scum-and-villainy",
+      "path": "packs/heritages",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "vice",
+      "label": "Vices",
+      "system": "scum-and-villainy",
+      "path": "packs/vices",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "background",
+      "label": "Backgrounds",
+      "system": "scum-and-villainy",
+      "path": "packs/backgrounds",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "item",
+      "label": "Items",
+      "system": "scum-and-villainy",
+      "path": "packs/items",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ability",
+      "label": "Abilities",
+      "system": "scum-and-villainy",
+      "path": "packs/abilities",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "crew_reputation",
+      "label": "Crew Reputation",
+      "system": "scum-and-villainy",
+      "path": "packs/crew_reputation",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "crew_type",
+      "label": "Ship Types",
+      "system": "scum-and-villainy",
+      "path": "packs/crew_types",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "crew_upgrade",
+      "label": "Ship Upgrades",
+      "system": "scum-and-villainy",
+      "path": "packs/crew_upgrades",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "crew_ability",
+      "label": "Ship Abilities",
+      "system": "scum-and-villainy",
+      "path": "packs/crew_abilities",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "job_tables",
+      "label": "Job Tables",
+      "system": "scum-and-villainy",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "star_system",
+      "label": "Star Systems",
+      "system": "scum-and-villainy",
+      "path": "packs/star_systems",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "planet",
+      "label": "Planets",
+      "system": "scum-and-villainy",
+      "path": "packs/planets",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "faction",
+      "label": "Factions",
+      "system": "scum-and-villainy",
+      "path": "packs/factions",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ship_size",
+      "label": "Ship Sizes",
+      "system": "scum-and-villainy",
+      "path": "packs/size",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "wanted",
+      "label": "Wanted Consequences",
+      "system": "scum-and-villainy",
+      "path": "packs/wanted-consequences",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "wanted_tables",
+      "label": "Wanted Tables",
+      "system": "scum-and-villainy",
+      "path": "packs/wanted-tables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "macros",
+      "label": "System Macros",
+      "system": "scum-and-villainy",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "friend",
+      "label": "Friends",
+      "system": "scum-and-villainy",
+      "path": "packs/friends",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ]
+}

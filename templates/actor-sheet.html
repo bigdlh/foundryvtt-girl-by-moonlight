@@ -1,0 +1,356 @@
+<form class="{{cssClass}} actor-sheet" autocomplete="off">
+  <section id="name-alias" class="flex-horizontal">
+
+    <img src="{{img}}" data-edit="img" title="{{name}}" height="100" width="100"/>
+
+    <div class="grow-two">
+
+      <div id="character-traits" class="flex-column">
+
+		    <div class="item-block flex-horizontal">
+          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "BITD.Class"}}</a></div>
+          {{#each items as |item id|}}
+            {{#if (eq item.type "class")}}
+              <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                <div class="item-body flex-horizontal">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                  <div class="tooltip">
+                    <a class="item-name">{{item.name}}</a>
+                    <span class="tooltiptext">{{{item.system.description}}}<br />{{localize "BITD.ClassExpClueDescription"}}<br />{{localize "BITD.ClassExpClue2"}}<br />{{localize "BITD.ClassExpClue3"}}<br />{{item.system.experience_clues}}</span>
+                  </div>
+                </div>
+                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              </div>
+            {{/if}}
+          {{/each}}
+          </div>
+          <div class="item-block flex-horizontal">
+            <div class="item-class-label">
+              <a class="flag-add-popup" data-distinct="true" data-item-type="ship">{{localize "BITD.Ship"}}</a>
+            </div>
+            {{#each shipActor as |item id|}}
+              {{#unless (eq item.name "")}}
+                <div class="item flex-horizontal" data-item-id="{{item.id}}" data-item-type="{{item.type}}">
+                  <div class="ship-body flex-horizontal">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                    <div>
+                      <a class="item-name">{{item.name}}</a>
+                    </div>
+                  </div>
+                  <a class="item-control flag-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                  <a style="visibility:hidden" class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+                </div>
+              {{/unless}}
+            {{/each}}
+          </div>
+          <div class="grow-two">
+            <div id="name">
+              <label for="character-{{_id}}-name">Name</label>
+              <input type="text" id="character-{{_id}}-name" name="name" value="{{name}}">
+            </div>
+      
+            <div id="name2">
+              <label for="character-{{_id}}-name2">True Name</label>
+              <input type="text" id="character-{{_id}}-name2" name="system.name2" value="{{system.name2}}">
+            </div>
+          </div>
+          
+        </div>
+        
+	    </div>
+    </div>
+
+    <div class="grow-two">
+      <div id="role">
+        <label for="character-{{_id}}-role">Role</label>
+        <input type="text" id="character-{{_id}}-role" name="system.role" value="{{system.role}}">
+      </div>
+
+	    <div id="background">
+        <label for="character-{{_id}}-background">Background</label>
+        <input type="text" id="character-{{_id}}-background" name="system.background" value="{{system.background}}">
+      </div>
+      <div id="obligation">
+        <label for="character-{{_id}}-obligation">Obligation</label>
+        <input type="text" id="character-{{_id}}-obligation" name="system.obligation" value="{{system.obligation}}">
+      </div>
+
+	    <div id="look">
+        <label for="character-{{_id}}-look">{{localize "BITD.Look"}}</label>
+        <input type="text" id="character-{{_id}}-look" name="system.look" value="{{system.look}}">
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  {{!-- Stress and Trauma --}}
+  <div id="stress-trauma" class="section big-teeth-section">
+    <div id="character-{{_id}}-stress" class="big-teeth">
+      {{#multiboxes system.stress.value}}
+        <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
+        <div id="stress-vice">
+	        <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
+	      </div>
+        {{#times_from_1 system.stress.max}}
+          <input type="radio" id="character-{{../_id}}-stress-{{this}}" name="system.stress.value" value="{{this}}" dtype="Radio">
+          <label for="character-{{../_id}}-stress-{{this}}"></label>
+        {{/times_from_1}}
+      {{/multiboxes}}
+    </div>
+    <div id="character-{{_id}}-transcendence" class="big-teeth">
+      {{#multiboxes system.transcendence.value}}
+        <input type="radio" id="character-{{_id}}-transcendence-0" name="system.transcendence.value" value="0" dtype="Radio">
+        <div id="transcendence-vice">
+	        <label class="black-label" for="character-{{_id}}-transcendence-0">{{localize "BITD.Transcendence"}}</label>
+	      </div>
+        {{#times_from_1 4}}
+          <input type="radio" id="character-{{../_id}}-transcendence-{{this}}" name="system.transcendence.value" value="{{this}}" dtype="Radio">
+          <label for="character-{{../_id}}-transcendence-{{this}}"></label>
+        {{/times_from_1}}
+      {{/multiboxes}}
+    </div>
+    {{#each items as |item id|}}
+      {{#if (eq item.type "class")}}
+        <div data-item-id="{{item._id}}">
+          <div class="grow-two">
+            <b>Virtue</b>
+            <label>{{item.system.avatarVirtue}}</label>
+          </div>
+          <div class="grow-two">
+            <b>Desire</b>
+            <label>{{item.system.avatarDesire}}</label>
+          </div>
+        </div>
+      </div>
+      {{{item.system.eclipse}}}
+      {{/if}}
+    {{/each}}
+    
+  </div>
+
+  {{!-- Harm, Healing and Armor --}}
+  <section id="harm-armor">
+    <div id="character-harm">
+      <table>
+        <thead>
+          <th class="black-white" colspan="4">{{localize "BITD.Harm"}}</th>
+          <th class="black-white" colspan="2">{{localize "BITD.Healing"}}</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td colspan="2">
+              <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.heavy.one" value="{{system.harm.heavy.one}}">
+            </td>
+            <td>{{localize "BITD.NeedHelp"}}</td>
+            <td rowspan="2">
+              <div id="character-health-clock">
+				        {{{sav-clock "system.healing-clock" system.healing-clockMax system.healing-clock _id}}}
+              </div>
+            </td>
+            <td rowspan="2" id="character-armor-uses">
+              <div>
+                <div>
+                  <label for="armor-uses-armor">{{localize "BITD.Armor"}}</label>
+                  <input id="armor-uses-armor" type="checkbox" data-dType="Boolean" name="system.armor-uses.armor" {{checked system.armor-uses.armor}}>
+                </div>
+                <div>
+                  <label for="armor-uses-special">{{localize "BITD.Special"}}</label>
+                  <input id="armor-uses-special" type="checkbox" data-dType="Boolean" name="system.armor-uses.special" {{checked system.armor-uses.special}}>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
+            </td>
+            <td>
+              <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
+            </td>
+            <td>-1D</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
+            </td>
+            <td>
+              <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
+            </td>
+            <td>{{localize "BITD.LessEffect"}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+
+
+  {{!-- Attributes --}}
+  <section class="flex-horizontal">
+
+    <div class="tab-content flex-vertical grow-two">
+
+      {{!-- Nav menu --}}
+      <nav class="tabs flex-horizontal">
+        <a class="item" data-tab="abilities">Playbook</a>
+        <a class="item" data-tab="series">Series</a>
+		    <a class="item" data-tab="friends">{{localize "BITD.Friends"}}</a>
+        <a class="item" data-tab="character-notes">{{localize "BITD.Notes"}}</a>
+        {{#if isGM}}
+          <a class="item" data-tab="effects">{{localize "BITD.Effects"}}</a>
+        {{/if}}
+        <a class="item" data-tab="all-character-items">{{localize "BITD.AllItems"}}</a>
+      </nav>
+
+      <div id="abilities" class="tab flex-vertical" data-tab="abilities">
+        <div class="label-stripe">
+          <p><label for="character-{{_id}}-experience-0">{{localize "BITD.Abilities"}}</label>
+          <a class="item-add-popup" data-item-type="ability" data-limiter="{{system.character_class}}"><i class="fas fa-plus-square"></i></a></p>
+          <div id="character-experience" class="teeth-experience tooltip">
+            <label for="character-{{_id}}-experience-0">{{localize "BITD.PExperience"}}<i class="fab fa-creative-commons-zero nullifier"></i>
+              <span class="tooltiptext left">{{localize "BITD.ClassExpClueDescription"}}<br />{{localize "BITD.ClassExpClue2"}}<br />{{localize "BITD.ClassExpClue3"}}<br />
+                {{#each items as |item|}}
+                  {{#if (eq item.type "class")}}
+                    {{item.system.experience_clues}}
+                  {{/if}}
+                {{/each}}
+              </span>
+            </label>
+            {{#multiboxes system.experience}}
+              <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0" dtype="Radio">
+              {{#times_from_1 system.experienceMax}}
+                <input type="radio" id="character-{{../_id}}-experience-{{this}}" name="system.experience" value="{{this}}" dtype="Radio">
+                <label for="character-{{../_id}}-experience-{{this}}"></label>
+              {{/times_from_1}}
+            {{/multiboxes}}
+          </div>
+        </div>
+
+        <div id="abilities-list">
+          {{#each items as |item|}}
+          {{#if (eq item.type "ability")}}
+            <div class="item flex-horizontal" data-item-id="{{item._id}}">
+              <div class="item-body flex-horizontal">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+				        <a class="item-name">{{item.name}}</a>
+                <div class="item-description">{{{item.system.description}}}</div>
+              </div>
+              <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+            </div>
+          {{/if}}
+          {{/each}}
+          <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize "BITD.AddAbility"}}</a></div>
+        </div>
+      </div>
+      
+      {{!-- Friends Tab --}}
+  <div id="friends" class="tab flex-vertical" data-tab="friends">
+		<div class="label-stripe">
+		  <p>{{localize "BITD.Friends"}}
+    </div>
+    <div id="friend-list">
+      <div id="stress-trauma" class="section big-teeth-section">
+        <div id="character-{{_id}}-link0" class="big-teeth">
+          {{#multiboxes system.link0.value}}
+            <input type="radio" id="character-{{_id}}-link0-0" name="system.link0.value" value="0" dtype="Radio">
+            <div id="stress-vice">
+              <label class="black-label" for="character-{{_id}}-link0-0">Elliot</label>
+            </div>
+            {{#times_from_1 6}}
+              <input type="radio" id="character-{{../_id}}-link0-{{this}}" name="system.link0.value" value="{{this}}" dtype="Radio">
+              <label class="small-teeth-wrap" for="character-{{../_id}}-link0-{{this}}"></label>
+            {{/times_from_1}}
+          {{/multiboxes}}
+        </div>
+      </div>
+      <div id="stress-trauma" class="section big-teeth-section">
+        <div id="character-{{_id}}-link1" class="big-teeth">
+          {{#multiboxes system.link1.value}}
+            <input type="radio" id="character-{{_id}}-link1-0" name="system.link1.value" value="0" dtype="Radio">
+            <div id="stress-vice">
+              <label class="black-label" for="character-{{_id}}-link1-0">Neal</label>
+            </div>
+            {{#times_from_1 6}}
+              <input type="radio" id="character-{{../_id}}-link1-{{this}}" name="system.link1.value" value="{{this}}" dtype="Radio">
+              <label for="character-{{../_id}}-link1-{{this}}"></label>
+            {{/times_from_1}}
+          {{/multiboxes}}
+        </div>
+      </div>
+      <div id="stress-trauma" class="section big-teeth-section">
+        <div id="character-{{_id}}-link2" class="big-teeth">
+          {{#multiboxes system.link2.value}}
+            <input type="radio" id="character-{{_id}}-link2-0" name="system.link2.value" value="0" dtype="Radio">
+            <div id="stress-vice">
+              <label class="black-label" for="character-{{_id}}-link2-0">Daniel</label>
+            </div>
+            {{#times_from_1 6}}
+              <input type="radio" id="character-{{../_id}}-link2-{{this}}" name="system.link2.value" value="{{this}}" dtype="Radio">
+              <label for="character-{{../_id}}-link2-{{this}}"></label>
+            {{/times_from_1}}
+          {{/multiboxes}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="tab flex-vertical" data-tab="character-notes">
+        <div class="label-stripe">
+          <p>{{localize "BITD.Notes"}}</p>
+        </div>
+        {{{editor system.description target="system.description" button=true owner=owner editable=editable}}}
+		    {{#if editable}}
+        <button type="submit" name="submit"><i class="fas fa-feather-alt"></i> {{localize "JOURNAL.Submit"}}</button>
+        {{/if}}
+      </div>
+
+      <div class="tab flex-vertical" data-tab="character-notes">
+        <div class="label-stripe">
+          <p>{{localize "BITD.Notes"}}</p>
+        </div>
+        {{{editor system.description target="system.description" button=true owner=owner editable=editable}}}
+		    {{#if editable}}
+        <button type="submit" name="submit"><i class="fas fa-feather-alt"></i> {{localize "JOURNAL.Submit"}}</button>
+        {{/if}}
+      </div>
+
+      {{!-- Active Effects --}}
+      {{#if isGM}}
+        <div id="effects" class="tab effects flex-vertical" data-tab="effects">
+          <div class="label-stripe">
+            <p>{{localize "BITD.Effects"}}</p>
+          </div>
+          {{> "systems/scum-and-villainy/templates/parts/active-effects.html"}}
+        </div>
+      {{/if}}
+
+      {{!-- Full Item List --}}
+      <div id="all-items" class="tab grow-two flex-vertical" data-tab="all-character-items">
+        <div class="label-stripe">
+          <p><label>{{localize "BITD.AllItems"}}</label></p>
+        </div>
+        {{#each items as |item id|}}
+        <div class="item flex-horizontal" data-item-id="{{item._id}}">
+          <div class="item-body item-sheet-open flex-horizontal">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            <a class="item-name">{{item.name}}</a>
+          </div>
+          <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+          <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+        </div>
+        {{/each}}
+      </div>
+
+    </div>
+    {{!-- Attributes --}}
+    {{> "systems/scum-and-villainy/templates/parts/attributes.html" actor=this}}
+  </section>
+
+</form>

@@ -1,0 +1,18 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+      <img src="{{img}}" data-edit="img" title="{{name}}"/>
+      <div class="header-fields">
+          <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'BITD.Name'}}"/></h1>
+      </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body flex-vertical">
+    <label class="label-stripe">{{localize "BITD.Description"}}</label>
+    {{{editor system.description target="system.description" button=true owner=owner editable=editable}}}
+    {{#if isGM}}
+      <div class="label-stripe">{{localize "BITD.Effects"}}</div>
+      <div id="effects">{{> "systems/scum-and-villainy/templates/parts/active-effects.html"}}</div>
+    {{/if}}
+  </section>
+</form>

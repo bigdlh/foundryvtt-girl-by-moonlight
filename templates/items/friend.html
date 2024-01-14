@@ -1,0 +1,15 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{img}}" data-edit="img" title="{{name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'BITD.Name'}}"/></h1>
+        </div>
+    </header>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body flex-vertical">
+      {{{editor system.description target="system.description" button=true owner=owner editable=editable}}}
+      <label class="label-stripe">Links</label>
+      <input id="friend-value" type="text" name="system.friend.value" value="{{system.friend.value}}">
+    </section>
+</form>

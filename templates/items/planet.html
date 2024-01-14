@@ -1,0 +1,54 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+      <img src="{{img}}" data-edit="img" title="{{name}}"/>
+      <div class="header-fields">
+          <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'BITD.Planet'}}"/></h1>
+      </div>
+  </header>
+
+  <section class="flex-vertical">
+    <label class="label-stripe">{{localize "BITD.Description"}}</label>
+    <textarea rows="10" name="system.description">{{{system.description}}}</textarea>
+    <div class="flex-horizontal">
+      <div class="flex-vertical grow-one">
+        <label class="label-stripe">{{localize "BITD.System"}}</label>
+        <textarea name="system.system">{{system.system}}</textarea>
+      </div>
+      <div class="flex-vertical grow-three">
+        <label class="label-stripe">{{localize "BITD.Stats"}}</label>
+        <div class="flex-horizontal stats">
+          <table>
+            <tr>
+              <td>{{localize 'BITD.Wealth'}}:</td>
+              <td><textarea name="system.wealth">{{system.wealth}}</textarea></td><td style="text-align:left">/ 3</td>
+            </tr>
+            <tr>
+              <td>{{localize 'BITD.CrimeSyndicate'}}:</td>
+              <td><textarea name="system.crime">{{system.crime}}</textarea></td><td style="text-align:left">/ 3</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>{{localize 'BITD.TechLevel'}}:</td>
+              <td><textarea name="system.tech">{{system.tech}}</textarea></td><td style="text-align:left">/ 3</td>
+            </tr>
+            <tr>
+              <td>{{localize 'BITD.Weirdness'}}:</td>
+              <td><textarea name="system.weird">{{system.weird}}</textarea></td><td style="text-align:left">/ 3</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+	<label class="label-stripe">{{localize "BITD.Scene"}}</label>
+  <textarea rows="10" name="system.scene">{{system.scene}}</textarea>
+	<label class="label-stripe">{{localize "BITD.Rule"}}</label>
+  <textarea rows="5" name="system.rule">{{system.rule}}</textarea>
+  <div class="flex-vertical">
+    <div class="label-stripe">{{localize "BITD.NotableNPCs"}}</div>
+    {{{editor system.notables target="system.notables" button=true owner=owner editable=editable}}}
+  </div>
+  </section>
+
+</form>

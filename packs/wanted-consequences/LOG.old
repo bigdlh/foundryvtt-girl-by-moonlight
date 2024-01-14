@@ -1,0 +1,7 @@
+2024/01/13-19:16:17.369 3b90 Recovering log #74
+2024/01/13-19:16:17.377 3b90 Delete type=0 #74
+2024/01/13-19:16:17.377 3b90 Delete type=3 #72
+2024/01/13-19:16:41.008 5524 Level-0 table #79: started
+2024/01/13-19:16:41.008 5524 Level-0 table #79: 0 bytes OK
+2024/01/13-19:16:41.010 5524 Delete type=0 #77
+2024/01/13-19:16:41.012 5524 Manual compaction at level-0 from '!journal!5NdDWbDu3xmkXXLn' @ 72057594037927935 : 1 .. '!journal!yVlyH8pgNclpbi33' @ 0 : 0; will stop at (end)

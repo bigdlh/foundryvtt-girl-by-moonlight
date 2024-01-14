@@ -1,0 +1,223 @@
+v1.0.1-1.0.3  Testing releases
+
+v1.0.4  Fix bad characters in friends.db and mismatch in default adds for Stardancer
+
+v1.0.5  Add user permissions checking to various actor update code to prevent throwing errors to users without owner permissions
+
+v1.0.6  Add default icons upon actor creation, change default icons to class/ship_type on add of same, don't overwrite user-modified art
+
+v1.0.7  Fixed the use of a global variable for the clocks UI from breaking everything  (thanks to Skimble!)
+
+v1.0.8  Fixed dangling bracket
+
+v1.0.9  Fixed planet sheet briefly popping open when deleting from a system on the universe sheet
+
+v1.0.10  Add field to template that the Notes tabs were pointing to
+
+v1.0.11  Fix token right click console errors, hide item logic fields from non-GMs, default tokens to always display name
+
+v1.1.0  initial 0.8.0 compatibility
+
+v1.1.1  fixed issues with TinyMCE in Notes tabs
+
+v1.1.2  Updated clocks ui sheet naming
+
+v1.2.0  Initial release to support both 0.7.x and 0.8.x simultaneously
+
+v1.2.1  Fix typos on ship sheet in designation and look fields
+
+v1.2.2  Fix typo const -> let on universe sheet
+
+v1.2.3  Fix token right-click console errors/Hide Logic fields from non-GMs/change icon defaults
+
+v1.2.4  Add async and await functions to Hook calls
+
+v1.2.5  Made faction tier and goal fields editable, merged testing with master
+
+v1.2.6  Fix manifest branch target, doh
+
+v1.2.7  Fix the ship sheet issues with retaining some settings modified by adding the class due to DB write overloading (FINALLY!)
+
+v1.2.8  Updates to support 0.8.1 (hooks, die rolls); rework CSS to not overwrite default for rolls from chat
+
+v1.2.9  Allow characters to have multiple vices; change the linking for the Playbook/Crew XP links to open the class/ship type item sheet to easily view the XP triggers
+
+v1.2.10  Fix too-wide item sheets
+
+v1.2.11  Implement sane getData compatibility; localize Load Levels; fix Vice button
+
+v1.2.12  Update for 0.8.2 (fix clock token UI CSS changes)
+
+v1.2.13  Fix sorting of Add Item dialog boxes and localize the titles
+
+v1.3.0  Improvements to the action roll popup (adapted from eHanus's Wicked Ones system)
+
+v1.4.0  Improvements to other roll popups and code cleanup
+
+v1.5.0  Add clocks to faction sheets
+
+v1.5.1  Minor bug fixes and improvement to faction sheet clock method
+
+v1.6.0  Added roll tooltips (hover over roll links for more information), made attribute/skill rolls dynamic
+
+v1.6.1  Fix tooltip bugs
+
+v1.6.2  Fix tooltip bugs
+
+v1.6.3  Fix Vice rolls
+
+v1.6.4  Fix createItem hook issues in 0.8.x, switch XP triggers to tooltip on hover
+
+v1.6.5  Bug fix for item import from compendiums
+
+v1.6.6  Add tooltips to traumas, bug fixes for tooltips
+
+v1.6.7  ALL THE TOOLTIPS, fixes for tooltips in dialogs, fix for class icon changes not persisting
+
+v1.6.8  Fixes for clock HUDs
+
+v1.7.0  Switch to using Active Effects, instead of Blades logic system
+
+v1.7.1  Fix ship sheet Active Effects
+
+v1.7.2  Fix sheets in 0.7.x
+
+v1.7.3  Fix Effects tab on items, restrict to 0.7.10, remove default attributes from class Active Effects
+
+v1.7.4  Fix ship Playbook XP zero trigger
+
+v1.7.5  Fix 0d Fortune rolls
+
+v1.7.6  Add tooltips to Universe sheet
+
+v1.7.7  Fixed broken template variables causing character sheet errors
+
+v1.7.8  Fixed some item load values in compendiums
+
+v1.7.9  Updates for v9 and code cleanup, remove pre-0.7 compatibility code
+
+v1.7.10  Add missing Stardancer special ability
+
+v1.7.11  Add missing localization on Current Load
+
+v1.7.12  Add Brazilian Portuguese localization  (thanks to brunocalado!)
+
+v1.8.0  Change numerous hardcoded values to template variables for macro modification
+
+v1.9.0  More localization fixes, fix for wandering plus on Abilities/Friends tabs, added buttons to send item descriptions to chat
+
+v1.9.1  Fix for chat items for 0.7.x
+
+v1.9.2  One more localization fix
+
+v1.9.3  Triple-brace item description fields
+
+v1.9.4  Fix Trauma tooltip z-indexing
+
+1.10.0  Add system settings to modify XP bar sizes for newly created actors, add macro for modifying existing actors (thanks again to brunocalado!)
+
+1.10.1  Additional localization fixes
+
+1.10.2  Localization fixes from brunocalado and mclemente, fix for faction goal clocks on newly created factions
+
+1.11.0  Add rolling Entanglement feature from Wanted link on Universe sheet (suggested by brunocalado)
+
+1.11.1  Fix for V9p2
+
+1.11.2  Fix for multiple Fortune roll controls in sidebar
+
+1.12.0  Added a Macro for instant Jobs -> Journal Entries from brunocalado and fixed main Job Roll Table
+
+1.12.1  Fix ship type terminology
+
+1.12.2  Fixes for Universe sheet, deleting systems, modifying class XP triggers
+
+1.13.0  Add faction clocks/goals to Universe sheet, add NPC actors
+
+1.13.1  Clean up Universe sheet
+
+1.13.2  Updates for V9d1, simplified NPC sheet, remove item logic fields and functions
+
+1.14.0  Adds chat notifications for changes to Ship resources
+
+1.14.1  Add setting for resource chat notifications
+
+1.14.2  Fix for loss of unique id on coin/stash fields
+
+1.14.3  Fix for Save to Journal Entry in Jobs macro when chat log is popped out
+
+1.14.4  Minor tab CSS fixes
+
+1.14.5  Fixes to ship items that affect character sheet UI ((St) Thrillseekers, etc.), add UPPERCASE to highlight choices in Add popups, fix missing bullets from ul, added class starting ability and recommended indicators and legend
+
+1.14.6  Improved UI for Forged indicator on character sheet
+
+1.14.7  Rework starting ability/recommended indicators
+
+1.14.8  Add'l minor UI fixes
+
+1.14.9  More indicator UI fixes
+
+1.14.10  Add'l localization fix, updated Change Bar macro to modify Stress
+
+1.14.11  Minor chat notify fix, prevent errors when a Ship assigned to a Character is deleted, refactor resource chat notifications to cover more Ship stats, fix Shields/Encryptor not saving to DB, track damage to Shields/Encryptor directly
+
+1.14.12  Extended resource chat notifications to Ship System item damage
+
+1.14.13  Fix first update to new ship actor
+
+1.14.14  Minor layout tweaks
+
+1.14.15  Further layout tweaks
+
+1.14.16  Layout fixes
+
+1.15.0  Added feature to create animated Tile when Planet or Star System dropped on canvas, added animated icons to Planets and Star Systems (idea and some icons contributed by brunocalado)
+
+1.15.1  Fix localization of Fortune rolls
+
+1.15.2  Add default initiative for Combat Tracker, change Planet Notable NPCs to TinyMCE, fix minor bugs
+
+1.15.3  Reconfigure all Item sheets
+
+1.15.4  Retain assigned Actor icons on duplication, fixes to accommodate multiple Universe Actors
+
+1.16.0  Added ability for GM to hide Systems/Planets/Factions from players on Universe sheet, reworked Universe sheet for greater flexibility in adding/removing Systems/Planets/Factions
+
+1.16.1  Allow HTML and special characters in sheet description fields
+
+1.17.0  Added Lifestyle Fortune roll shortcut
+
+1.17.1  Fixed unnecessary chat log on edits to Ship Notes field
+
+1.17.2  Added different Cerberus Ship Types to reflect the discrepancy between book and playbook sheets
+
+1.18.0  Last V9 release, changed selectors for Position and Effect in Action roll dialog
+
+2.0.0  V10 compatibility, drop support for V9 and earlier
+
+2.1.0  Add option to enter roll purpose for Fortune Rolls to be included in chat result
+
+2.1.1  Fix Price/Load display in Add dialogs, fix Ship upgrade dialog culling, fixed current loadout value being available outside the character sheet
+
+2.1.2  Fix "k is not defined" error for V9 users
+
+2.1.3  Fix Trauma checkbox validations
+
+2.1.4  Change background image in new Journal Entries to match sheets/chat cards
+
+2.1.5  Fix ship assignment to characters
+
+2.1.6  Default Map Notes Visibility to true, V11 compatibility
+
+2.1.7  Fix to Jobs macro folder code (reimport to use)
+
+2.1.8  Testing Github Actions for automated releases
+
+2.1.9  Fixes default status for factions to Neutral
+
+2.2.0  Adds new Faction Status Actor sheet contributed by MarkPearce
+
+2.2.1  Minor fixes to new Faction sheet, default type for Factions
+
+2.2.2  Fix making changes to Clock Actors with no active scene

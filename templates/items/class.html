@@ -1,0 +1,37 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+      <img src="{{img}}" data-edit="img" title="{{name}}"/>
+      <div class="header-fields">
+          <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'BITD.Name'}}"/></h1>
+      </div>
+  </header>
+
+  <section class="flex-vertical">
+    <label class="label-stripe">{{localize "BITD.Description"}}</label>
+    {{{editor system.description target="system.description" button=true owner=owner editable=editable}}}
+    <label class="label-stripe">Avatar</label>
+    <div id="virtue" class="grow-two">
+      <label for="character-virtue">Virtue</label>
+      <input type="text" id="character-name2" name="system.avatarVirtue" value="{{system.avatarVirtue}}">
+      <label for="character-name2">Desires</label>
+      <input type="text" id="character-name2" name="system.avatarDesire" value="{{system.avatarDesire}}">
+    </div>
+    <label class="label-stripe">Eclipse</label>
+    {{{editor system.eclipse target="system.eclipse" button=true owner=owner editable=editable}}}
+    <label class="label-stripe">{{localize "BITD.ExpClues"}}</label>
+    <div><i>- {{localize "BITD.ClassExpClue1"}}</i></div><br>
+    <div>{{localize "BITD.ClassExpClueDescription"}}</div>
+    <div><i>- {{localize "BITD.ClassExpClue2"}}</i></div>
+    <div><i>- {{localize "BITD.ClassExpClue3"}}</i></div>
+    <br>
+    <label class="label-stripe">{{localize "BITD.ClassExpClue"}}</label>
+    {{{editor system.experience_clues target="system.experience_clues" button=true owner=owner editable=editable}}}
+    {{#if isGM}}
+      <label class="label-stripe">{{localize "BITD.AddUpgrades"}}</label>
+      <textarea name="system.def_abilities">{{system.def_abilities}}</textarea>
+      <div class="label-stripe">{{localize "BITD.Effects"}}</div>
+      <div id="effects">{{> "systems/scum-and-villainy/templates/parts/active-effects.html"}}</div>
+    {{/if}}
+  </section>
+
+</form>
