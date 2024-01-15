@@ -65,20 +65,23 @@
       <div id="role">
         <label for="character-{{_id}}-role">Role</label>
         <input type="text" id="character-{{_id}}-role" name="system.role" value="{{system.role}}">
-      </div>
-
-	    <div id="background">
         <label for="character-{{_id}}-background">Background</label>
         <input type="text" id="character-{{_id}}-background" name="system.background" value="{{system.background}}">
       </div>
+
       <div id="obligation">
         <label for="character-{{_id}}-obligation">Obligation</label>
         <input type="text" id="character-{{_id}}-obligation" name="system.obligation" value="{{system.obligation}}">
       </div>
 
-	    <div id="look">
-        <label for="character-{{_id}}-look">{{localize "BITD.Look"}}</label>
-        <input type="text" id="character-{{_id}}-look" name="system.look" value="{{system.look}}">
+      <div id="name">
+        <label for="character-{{_id}}-look">Promise</label>
+        <input type="text" id="character-{{_id}}-look" name="system.promise1" value="{{system.promise1}}">
+      </div>
+
+      <div id="name">
+        <label for="character-{{_id}}-look">Promise</label>
+        <input type="text" id="character-{{_id}}-look" name="system.promise2" value="{{system.promise2}}">
       </div>
     </div>
   </div>
@@ -124,77 +127,74 @@
           </div>
         </div>
       </div>
-      {{{item.system.eclipse}}}
       {{/if}}
     {{/each}}
     
   </div>
-
-  {{!-- Harm, Healing and Armor --}}
-  <section id="harm-armor">
-    <div id="character-harm">
-      <table>
-        <thead>
-          <th class="black-white" colspan="4">{{localize "BITD.Harm"}}</th>
-          <th class="black-white" colspan="2">{{localize "BITD.Healing"}}</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3</td>
-            <td colspan="2">
-              <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.heavy.one" value="{{system.harm.heavy.one}}">
-            </td>
-            <td>{{localize "BITD.NeedHelp"}}</td>
-            <td rowspan="2">
-              <div id="character-health-clock">
-				        {{{sav-clock "system.healing-clock" system.healing-clockMax system.healing-clock _id}}}
-              </div>
-            </td>
-            <td rowspan="2" id="character-armor-uses">
-              <div>
-                <div>
-                  <label for="armor-uses-armor">{{localize "BITD.Armor"}}</label>
-                  <input id="armor-uses-armor" type="checkbox" data-dType="Boolean" name="system.armor-uses.armor" {{checked system.armor-uses.armor}}>
-                </div>
-                <div>
-                  <label for="armor-uses-special">{{localize "BITD.Special"}}</label>
-                  <input id="armor-uses-special" type="checkbox" data-dType="Boolean" name="system.armor-uses.special" {{checked system.armor-uses.special}}>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
-            </td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
-            </td>
-            <td>-1D</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
-            </td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
-            </td>
-            <td>{{localize "BITD.LessEffect"}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-
-
-
   {{!-- Attributes --}}
   <section class="flex-horizontal">
 
     <div class="tab-content flex-vertical grow-two">
+
+      {{!-- Harm, Healing and Armor --}}
+      <section id="harm-armor">
+        <div id="character-harm">
+          <table>
+            <thead>
+              <th class="black-white" colspan="4">{{localize "BITD.Harm"}}</th>
+              <th class="black-white" colspan="2">{{localize "BITD.Healing"}}</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td colspan="2">
+                  <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.heavy.one" value="{{system.harm.heavy.one}}">
+                </td>
+                <td>{{localize "BITD.NeedHelp"}}</td>
+                <td rowspan="2">
+                  <div id="character-health-clock">
+                    {{{sav-clock "system.healing-clock" system.healing-clockMax system.healing-clock _id}}}
+                  </div>
+                </td>
+                <td rowspan="2" id="character-armor-uses">
+                  <div>
+                    <div>
+                      <label for="armor-uses-armor">{{localize "BITD.Armor"}}</label>
+                      <input id="armor-uses-armor" type="checkbox" data-dType="Boolean" name="system.armor-uses.armor" {{checked system.armor-uses.armor}}>
+                    </div>
+                    <div>
+                      <label for="armor-uses-special">{{localize "BITD.Special"}}</label>
+                      <input id="armor-uses-special" type="checkbox" data-dType="Boolean" name="system.armor-uses.special" {{checked system.armor-uses.special}}>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
+                </td>
+                <td>
+                  <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
+                </td>
+                <td>-1D</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>
+                  <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
+                </td>
+                <td>
+                  <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
+                </td>
+                <td>{{localize "BITD.LessEffect"}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      
 
       {{!-- Nav menu --}}
       <nav class="tabs flex-horizontal">
@@ -315,7 +315,13 @@
         <div class="label-stripe">
           <p>{{system.name2}}</p>
         </div>
-
+        <div>
+          {{#each items as |item id|}}
+            {{#if (eq item.type "class")}}
+              {{{item.system.eclipse}}}
+            {{/if}}
+          {{/each}}
+        </div>
       </div>
 
       {{!-- Active Effects --}}

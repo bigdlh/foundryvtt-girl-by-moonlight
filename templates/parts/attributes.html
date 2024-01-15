@@ -40,4 +40,18 @@
 
     </div>
   {{/each}}
-</div>
+
+  <div class="stripe">
+    <b>Gather Information</b>
+  </div>
+  <div class="grow-two">
+    <div>
+      {{#each items as |item id|}}
+        {{#if (eq item.type "class")}}
+          <b>{{{item.system.gatherInformation}}}</b>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</div>>
+

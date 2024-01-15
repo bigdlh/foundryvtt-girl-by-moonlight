@@ -11,8 +11,10 @@
     "description": "",
     "character_class": "",
     "isTranscendent": false,
+    "promise1": "",
+    "promise2": "",
     "link0": {
-      "value": 2,
+      "value": 0,
       "max": 6,
       "max_default": 6
     },
@@ -357,6 +359,7 @@
     "avatarVirtue": "",
     "avatarDesire": "",
     "eclipse": "",
+    "gatherInformation": "",
     "def_abilities": "",
 	"experience_clues": ""
   },
