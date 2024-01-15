@@ -301,6 +301,7 @@
     },
     "ability": {
       "description": "",
+      "tip": "",
       "class": "",
       "price": 1,
       "starting": false,

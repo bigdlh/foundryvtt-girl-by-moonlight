@@ -1168,7 +1168,6 @@
 }
 * .item {
   justify-content: space-between;
-  font-weight: bold;
 }
 * #abilities .item,
 * #loadout .item,
@@ -2106,16 +2105,5 @@ padding: 0px;
   display: flex;
   vertical-align: middle;
   justify-content: center;
-}
-
-.attributes-exp::after {
-  content:'';
-  position: absolute;
-  width: 0px;
-  height: 40px;
-  margin: auto;
-  border: 20px solid #ff6666;
-  left:42px;
-  z-index: -1;
 }
 /*# sourceMappingURL=sav.css.map */
