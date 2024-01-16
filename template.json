@@ -1,10 +1,10 @@
 {
 "Actor": {
-  "types": ["character", "npc", "ship", "\uD83D\uDD5B clock", "universe","faction-status"],
+  "types": ["character", "npc", "ship", "\uD83D\uDD5B clock"],
   "character": {
     "alias": "",
 	  "look": "",
-    "name2": "",
+    "name2": "Series",
     "role":"",
     "background":"",
     "obligation":"",
@@ -284,16 +284,10 @@
     "name": "",
     "type": 4,
     "value": "0"
-  },
-  "universe": {
-  	"name": ""
-  },
-    "faction-status": {
-  	"name": ""
   }
 },
 "Item": {
-  "types": ["item", "class", "ability", "heritage", "background", "vice", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "star_system", "planet", "faction", "ship_size", "friend"],
+  "types": ["item", "class", "ability", "crew_type", "crew_upgrade", "crew_ability", "friend"],
   "templates": {
     "default": {
       "description": "",
@@ -367,22 +361,10 @@
   "ability": {
     "templates": ["ability", "logic", "activatedEffect"]
   },
-  "heritage": {
-    "templates": ["default", "activatedEffect"]
-  },
-  "background": {
-    "templates": ["default", "activatedEffect"]
-  },
-  "vice": {
-    "templates": ["default", "activatedEffect"]
-  },
   "crew_type": {
     "templates": ["default", "logic", "activatedEffect"],
 	"def_abilities": "",
 	"experience_clues": ""
-  },
-  "crew_reputation": {
-    "templates": ["default"]
   },
   "crew_upgrade": {
     "templates": ["ability", "logic", "activatedEffect"],
@@ -392,68 +374,6 @@
   "crew_ability": {
     "templates": ["ability", "logic", "activatedEffect"],
     "recommended": false
-  },
-  "star_system": {
-    "templates": ["default"],
-	"notables": "",
-	"heat": {
-      "value": [0],
-      "max": 8,
-      "max_default": 8,
-      "name_default": "BITD.Heat",
-      "name": "BITD.Heat"
-    },
-	"wanted": {
-      "value": [0],
-      "max": 4,
-      "max_default": 4,
-      "name_default": "BITD.Wanted",
-      "name": "BITD.Wanted"
-    }
-  },
-  "planet": {
-    "templates": ["default", "logic", "activatedEffect"],
-	"system": "",
-	"scene": "",
-	"notables": "",
-	"rule": "",
-	"wealth": 0,
-	"crime": 0,
-	"tech": 0,
-	"weird": 0
-  },
-  "faction": {
-    "templates": ["default"],
-	"type": "Weirdness",
-	"tier": "1",
-	"goal": "",
-	"turf": "",
-	"assets": "",
-	"quirks": "",
-	"notables": "",
-	"allies": "",
-	"enemies": "",
-	"situation": "",
-	"goal_clock": {
-      "value": "0",
-      "max": "4"
-    },
-	"status": {
-      "value": 4,
-      "max": 7,
-      "name": "BITD.Status"
-    },
-	"jobs": {
-      "value": [0],
-      "max": 3,
-      "name": "BITD.Jobs"
-    }
-  },
-  "ship_size": {
-    "templates": ["default", "logic", "activatedEffect"]
-  },
-	"status": {
-	  "value": [1]
   }
 }
 }

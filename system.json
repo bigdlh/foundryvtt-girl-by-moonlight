@@ -48,42 +48,6 @@
       "flags": {}
     },
     {
-      "name": "heritage",
-      "label": "Heritages",
-      "system": "girl-by-moonlight",
-      "path": "packs/heritages",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "vice",
-      "label": "Vices",
-      "system": "girl-by-moonlight",
-      "path": "packs/vices",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "background",
-      "label": "Backgrounds",
-      "system": "girl-by-moonlight",
-      "path": "packs/backgrounds",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
       "name": "item",
       "label": "Items",
       "system": "girl-by-moonlight",
@@ -108,20 +72,8 @@
       "flags": {}
     },
     {
-      "name": "crew_reputation",
-      "label": "Crew Reputation",
-      "system": "girl-by-moonlight",
-      "path": "packs/crew_reputation",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
       "name": "crew_type",
-      "label": "Ship Types",
+      "label": "Series Playbook",
       "system": "girl-by-moonlight",
       "path": "packs/crew_types",
       "type": "Item",
@@ -133,7 +85,7 @@
     },
     {
       "name": "crew_upgrade",
-      "label": "Ship Upgrades",
+      "label": "Series Items",
       "system": "girl-by-moonlight",
       "path": "packs/crew_upgrades",
       "type": "Item",
@@ -145,94 +97,10 @@
     },
     {
       "name": "crew_ability",
-      "label": "Ship Abilities",
+      "label": "Series Abilities",
       "system": "girl-by-moonlight",
       "path": "packs/crew_abilities",
       "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "job_tables",
-      "label": "Job Tables",
-      "system": "girl-by-moonlight",
-      "path": "packs/tables",
-      "type": "RollTable",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "star_system",
-      "label": "Star Systems",
-      "system": "girl-by-moonlight",
-      "path": "packs/star_systems",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "planet",
-      "label": "Planets",
-      "system": "girl-by-moonlight",
-      "path": "packs/planets",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "faction",
-      "label": "Factions",
-      "system": "girl-by-moonlight",
-      "path": "packs/factions",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "ship_size",
-      "label": "Ship Sizes",
-      "system": "girl-by-moonlight",
-      "path": "packs/size",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "wanted",
-      "label": "Wanted Consequences",
-      "system": "girl-by-moonlight",
-      "path": "packs/wanted-consequences",
-      "type": "JournalEntry",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "wanted_tables",
-      "label": "Wanted Tables",
-      "system": "girl-by-moonlight",
-      "path": "packs/wanted-tables",
-      "type": "RollTable",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"

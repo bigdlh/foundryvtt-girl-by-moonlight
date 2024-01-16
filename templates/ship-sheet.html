@@ -18,7 +18,7 @@
                   <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                   <div class="tooltip">
                     <a class="item-name">{{item.name}}</a>
-                    <span class="tooltiptext">{{{item.system.description}}}<br />{{localize "BITD.CrewExpClueDescription"}}<br />{{localize "BITD.CrewExpClue2"}}<br />{{localize "BITD.CrewExpClue3"}}<br />{{localize "BITD.CrewExpClue4"}}<br />{{item.system.experience_clues}}</span>
+                    <span class="tooltiptext">{{{item.system.description}}}<br />{{localize "BITD.CrewExpClueDescription"}}<br />{{localize "BITD.CrewExpClue2"}}<br />{{localize "BITD.CrewExpClue3"}}<br />{{localize "BITD.CrewExpClue4"}}<br />{{localize "BITD.CrewExpClue5"}}<br />{{item.system.experience_clues}}</span>
                   </div>
                 </div>
                 <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
@@ -32,25 +32,6 @@
           <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="ship_size">{{localize "BITD.ShipSize"}}</a></div>
           {{#each items as |item id|}}
             {{#if (eq item.type "ship_size")}}
-              <div class="item flex-horizontal" data-item-id="{{item._id}}">
-                <div class="item-body flex-horizontal">
-                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                  <div class="tooltip">
-                    <a class="item-name">{{item.name}}</a>
-                    <span class="tooltiptext">{{{item.system.description}}}</span>
-                  </div>
-                </div>
-                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-              </div>
-            {{/if}}
-          {{/each}}
-        </div>
-
-		    <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="crew_reputation">{{localize "BITD.CrewReputation"}}</a></div>
-          {{#each items as |item id|}}
-            {{#if (eq item.type "crew_reputation")}}
               <div class="item flex-horizontal" data-item-id="{{item._id}}">
                 <div class="item-body flex-horizontal">
                   <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
@@ -173,7 +154,7 @@
           <a class="item-add-popup" data-item-type="crew_ability" data-limiter=system.ship_class><i class="fas fa-plus-square"></i></a></p>
           <div id="ship-experience" class="teeth-experience tooltip">
             <label for="ship-{{_id}}-experience-0">{{localize "BITD.PExperience"}}<i class="fab fa-creative-commons-zero nullifier"></i>
-              <span class="tooltiptext left">{{localize "BITD.CrewExpClueDescription"}}<br />{{localize "BITD.CrewExpClue2"}}<br />{{localize "BITD.CrewExpClue3"}}<br />{{localize "BITD.CrewExpClue4"}}<br />
+              <span class="tooltiptext left">{{localize "BITD.CrewExpClueDescription"}}<br />{{localize "BITD.CrewExpClue2"}}<br />{{localize "BITD.CrewExpClue3"}}<br />{{localize "BITD.CrewExpClue4"}}<br />{{localize "BITD.CrewExpClue5"}}<br />
                 {{#each items as |item id|}}
                   {{#if (eq item.type "crew_type")}}
                     {{item.system.experience_clues}}
