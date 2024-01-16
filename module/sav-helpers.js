@@ -12,7 +12,7 @@ export class SaVHelpers {
    */
   static removeDuplicatedItemType(item_data, actor) {
     let dupe_list = [];
-    let distinct_types = ["crew_reputation", "class", "background", "vice", "heritage", "ship_size", "crew_type"];
+    let distinct_types = ["class", "crew_type"];
     let allowed_types = ["item"];
     let should_be_distinct = distinct_types.includes(item_data.type);
     // If the Item has the exact same name - remove it from list.

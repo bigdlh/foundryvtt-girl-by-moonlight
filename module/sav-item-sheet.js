@@ -39,7 +39,7 @@ export class SaVItemSheet extends ItemSheet {
   /** @override */
   get template() {
     const path = "systems/girl-by-moonlight/templates/items";
-    let simple_item_types = ["background", "heritage", "vice", "crew_reputation", "ship_size"];
+    let simple_item_types = ["ship_size"];
     let template_name = `${this.item.type}`;
 
     if (simple_item_types.indexOf(this.item.type) >= 0) {
