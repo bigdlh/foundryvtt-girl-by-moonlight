@@ -1,3 +1,8 @@
-2024/01/14-21:39:46.982 32d0 Recovering log #94
-2024/01/14-21:39:46.990 32d0 Delete type=0 #94
-2024/01/14-21:39:46.990 32d0 Delete type=3 #92
+2024/01/16-16:20:18.313 2538 Recovering log #40
+2024/01/16-16:20:18.321 2538 Delete type=0 #40
+2024/01/16-16:20:18.321 2538 Delete type=3 #38
+2024/01/16-18:48:51.583 1fec Level-0 table #45: started
+2024/01/16-18:48:51.583 1fec Level-0 table #45: 0 bytes OK
+2024/01/16-18:48:51.586 1fec Delete type=0 #43
+2024/01/16-18:48:51.604 1fec Manual compaction at level-0 from '!items!AkBrIECn2YusCmaR' @ 72057594037927935 : 1 .. '!items!AkBrIECn2YusCmaR' @ 0 : 0; will stop at (end)
+2024/01/16-18:48:51.613 1fec Manual compaction at level-1 from '!items!AkBrIECn2YusCmaR' @ 72057594037927935 : 1 .. '!items!AkBrIECn2YusCmaR' @ 0 : 0; will stop at (end)
