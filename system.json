@@ -10,14 +10,14 @@
     }
   ],
   "url": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight",
-  "version": "1.1",
+  "version": "1.2",
   "compatibility": {
     "minimum": "10",
     "verified": "11.315"
   },
   "relationships": [],
   "manifest": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/latest/download/system.json",
-  "download": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/download/1.1/system.zip",
+  "download": "https://github.com/bigdlh/foundryvtt-girl-by-moonlight/releases/download/1.2/system.zip",
   "initiative": "1d20",
   "esmodules": [
     "module/sav.js"
