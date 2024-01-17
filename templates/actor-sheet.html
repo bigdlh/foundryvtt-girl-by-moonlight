@@ -229,6 +229,17 @@
               <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
             </div>
           {{/if}}
+          {{#if (eq item.type "crew_ability")}}
+		          <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                <div class="item-body flex-horizontal">
+				          <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                  <a class="item-name">{{item.name}}</a>
+                  <div class="item-description">{{{item.system.description}}}</div>
+                </div>
+                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              </div>
+            {{/if}}
           {{/each}}
           <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize "BITD.AddAbility"}}</a></div>
         </div>

@@ -120,6 +120,18 @@
       "flags": {}
     },
     {
+      "name": "journals",
+      "label": "Journals",
+      "system": "girl-by-moonlight",
+      "path": "packs/journal",
+      "type": "Journal",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
       "name": "friend",
       "label": "Friends",
       "system": "girl-by-moonlight",
