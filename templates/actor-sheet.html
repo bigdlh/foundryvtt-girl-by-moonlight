@@ -184,6 +184,7 @@
       {{!-- Nav menu --}}
       <nav class="tabs flex-horizontal">
         <a class="item" data-tab="abilities">Abilities</a>
+        <a class="item" data-tab="series">{{system.name2}}</a>
 		    <a class="item" data-tab="friends">{{localize "BITD.Friends"}}</a>
         <a class="item" data-tab="character-notes">{{localize "BITD.Notes"}}</a>
         {{#if isGM}}
@@ -250,7 +251,7 @@
 		<div class="label-stripe">
 		  <p>{{localize "BITD.Friends"}}
     </div>
-    <div id="friend-list">
+    <div id="friend-list" class="grow-two">
       <div id="stress-trauma" class="section big-teeth-section">
         <div id="character-{{_id}}-link0" class="big-teeth">
           {{#multiboxes system.link0.value}}
@@ -293,8 +294,38 @@
           {{/multiboxes}}
         </div>
       </div>
+      <br>
+      <div>
+        <label class="label-stripe">Spend links on allies: </label>
+        <a>You or linked protagonist recover 2 stress<br>They ignore 1 harm tag<br>Grant +1d to ally's action<br>Prevent their eclipse on a 4/5 result</a>
+      </div>
     </div>
   </div>
+
+      <div class="tab flex-vertical" data-tab="series">
+        <label class="label-stripe">Avatar</label>
+        <div id="virtue" class="grow-two">
+          <a class="tooltip"><strong>Virtue: </strong>
+            <span class="tooltiptext right">When your actions align with your Avatar’s virtue, clear 1 stress</span>
+            <input type="text" id="character-name2" name="system.avatarVirtue" value="{{system.avatarVirtue}}">
+          </a>
+          <a class="tooltip"><strong>Desires: </strong>
+            <span class="tooltiptext right">When your actions align with one of your Avatar’s desires, or you accept a poisoned promise based on its desires, that action does not deplete your transcendence track, and you mark xp.</span>
+            <input type="text" id="character-name2" name="system.avatarDesire" value="{{system.avatarDesire}}">
+          </a>
+        </div>
+        <br>
+        <label class="label-stripe">Eclipse</label>
+        <div class="grow-two">
+          <div>
+            {{#each items as |item id|}}
+              {{#if (eq item.type "class")}}
+                <a>{{{item.system.eclipse}}}</a>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
 
       <div class="tab flex-vertical" data-tab="character-notes">
         <div class="label-stripe">

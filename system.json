@@ -124,7 +124,7 @@
       "label": "Journals",
       "system": "girl-by-moonlight",
       "path": "packs/journal",
-      "type": "Journal",
+      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
