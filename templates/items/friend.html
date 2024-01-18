@@ -5,11 +5,20 @@
             <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'BITD.Name'}}"/></h1>
         </div>
     </header>
-
-    {{!-- Sheet Body --}}
-    <section class="sheet-body flex-vertical">
-      {{{editor system.description target="system.description" button=true owner=owner editable=editable}}}
-      <label class="label-stripe">Links</label>
-      <input id="friend-value" type="text" name="system.friend.value" value="{{system.friend.value}}">
-    </section>
+    
+    <div id="stress-trauma" class="section big-teeth-section">  
+        <label>{{system.value0}}</label>
+        <div class="big-teeth">
+        {{#multiboxes system.value0}}
+          <input type="radio" id="friend-0" name="system.value0" value="0" dtype="Radio">
+          <div id="transcendence-vice">
+              <label class="black-label" for="friend-0">{{localize "BITD.Transcendence"}}</label>
+            </div>
+          {{#times_from_1 6}}
+            <input type="radio" id="friend-{{this}}" name="system.value0" value="{{this}}" dtype="Radio">
+            <label for="friend-{{this}}"></label>
+          {{/times_from_1}}
+        {{/multiboxes}}
+      </div>
+    </div>
 </form>

@@ -251,54 +251,30 @@
 		<div class="label-stripe">
 		  <p>{{localize "BITD.Friends"}}
     </div>
-    <div id="friend-list" class="grow-two">
-      <div id="stress-trauma" class="section big-teeth-section">
-        <div id="character-{{_id}}-link0" class="big-teeth">
-          {{#multiboxes system.link0.value}}
-            <input type="radio" id="character-{{_id}}-link0-0" name="system.link0.value" value="0" dtype="Radio">
-            <div id="stress-vice">
-              <label class="black-label" for="character-{{_id}}-link0-0">Elliot</label>
+    <div id="friend-list" class="grow-two item-body">
+      {{#each items as |item id|}}
+      {{#if (eq item.type "friend")}}
+      <div id="{{id}}-stress-trauma" class="section big-teeth-section" data-item-id="{{item._id}}">  
+        <div class="big-teeth">
+        {{#multiboxes item.value}}
+          <input type="radio" id="friend-0" name="item.value{{id}}" value="0" dtype="Radio">
+          <div id="transcendence-vice">
+              <label class="black-label" for="friend-0">{{concat "item.value" id}}</label>
             </div>
-            {{#times_from_1 6}}
-              <input type="radio" id="character-{{../_id}}-link0-{{this}}" name="system.link0.value" value="{{this}}" dtype="Radio">
-              <label class="small-teeth-wrap" for="character-{{../_id}}-link0-{{this}}"></label>
-            {{/times_from_1}}
-          {{/multiboxes}}
-        </div>
+          {{#times_from_1 6}}
+            <input type="radio" id="friend-{{this}}" name="item.value{{id}}" value="{{this}}" dtype="Radio">
+            <label for="friend-{{this}}"></label>
+          {{/times_from_1}}
+        {{/multiboxes}}
       </div>
-      <div id="stress-trauma" class="section big-teeth-section">
-        <div id="character-{{_id}}-link1" class="big-teeth">
-          {{#multiboxes system.link1.value}}
-            <input type="radio" id="character-{{_id}}-link1-0" name="system.link1.value" value="0" dtype="Radio">
-            <div id="stress-vice">
-              <label class="black-label" for="character-{{_id}}-link1-0">Neal</label>
-            </div>
-            {{#times_from_1 6}}
-              <input type="radio" id="character-{{../_id}}-link1-{{this}}" name="system.link1.value" value="{{this}}" dtype="Radio">
-              <label for="character-{{../_id}}-link1-{{this}}"></label>
-            {{/times_from_1}}
-          {{/multiboxes}}
-        </div>
-      </div>
-      <div id="stress-trauma" class="section big-teeth-section">
-        <div id="character-{{_id}}-link2" class="big-teeth">
-          {{#multiboxes system.link2.value}}
-            <input type="radio" id="character-{{_id}}-link2-0" name="system.link2.value" value="0" dtype="Radio">
-            <div id="stress-vice">
-              <label class="black-label" for="character-{{_id}}-link2-0">Daniel</label>
-            </div>
-            {{#times_from_1 6}}
-              <input type="radio" id="character-{{../_id}}-link2-{{this}}" name="system.link2.value" value="{{this}}" dtype="Radio">
-              <label for="character-{{../_id}}-link2-{{this}}"></label>
-            {{/times_from_1}}
-          {{/multiboxes}}
-        </div>
-      </div>
-      <br>
-      <div>
-        <label class="label-stripe">Spend links on allies: </label>
-        <label>You or linked protagonist recover 2 stress<br>They ignore 1 harm tag<br>Grant +1d to ally's action<br>Prevent their eclipse on a 4/5 result</label>
-      </div>
+    </div>
+      {{/if}}
+    {{/each}}
+    </div>
+    <br>
+    <div>
+      <label class="label-stripe">Spend links on allies: </label>
+      <label>You or linked protagonist recover 2 stress<br>They ignore 1 harm tag<br>Grant +1d to ally's action<br>Prevent their eclipse on a 4/5 result</label>
     </div>
   </div>
 
@@ -316,14 +292,12 @@
         </div>
         <br>
         <label class="label-stripe">Eclipse</label>
-        <div class="grow-two">
-          <div>
+        <div id="abilities">
             {{#each items as |item id|}}
               {{#if (eq item.type "class")}}
                 <label>{{{item.system.eclipse}}}</label>
               {{/if}}
             {{/each}}
-          </div>
         </div>
       </div>
 

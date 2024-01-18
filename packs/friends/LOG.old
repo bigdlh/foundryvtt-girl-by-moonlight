@@ -1,3 +1,4 @@
-2024/01/17-02:20:33.825 22b0 Recovering log #83
-2024/01/17-02:20:33.831 22b0 Delete type=0 #83
-2024/01/17-02:20:33.831 22b0 Delete type=3 #81
+2024/01/17-22:02:15.138 2020 Log #88: 0 ops saved to Table #89 OK
+2024/01/17-22:02:15.138 2020 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\friends/000088.log: OK
+2024/01/17-22:02:15.140 2020 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\friends/MANIFEST-000087: OK
+2024/01/17-22:02:15.144 2020 **** Repaired leveldb F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\friends; recovered 0 files; 0 bytes. Some data may have been lost. ****
