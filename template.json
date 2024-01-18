@@ -13,36 +13,6 @@
     "isTranscendent": false,
     "promise1": "",
     "promise2": "",
-    "link0": {
-      "value": 0,
-      "max": 6,
-      "max_default": 6
-    },
-    "link1": {
-      "value": [0],
-      "max": 6,
-      "max_default": 6
-    },
-    "link2": {
-      "value": [0],
-      "max": 6,
-      "max_default": 6
-    },
-    "link3": {
-      "value": [0],
-      "max": 6,
-      "max_default": 6
-    },
-    "link4": {
-      "value": [0],
-      "max": 6,
-      "max_default": 6
-    },
-    "link5": {
-      "value": [0],
-      "max": 6,
-      "max_default": 6
-    },
     "stress": {
       "value": [0],
       "max": 9,
@@ -344,10 +314,51 @@
   },
   "friend": {
     "templates": ["default", "logic", "activatedEffect"],
-    "value": [0],
+    "links": {
+      "0": {
+        "value": [0],
+        "max": 6
+      },
+      "1": {
+        "value": [0],
+        "max": 6
+      },
+      "2": {
+        "value": [0],
+        "max": 6
+      },
+      "3": {
+        "value": [0],
+        "max": 6
+      },
+      "4": {
+        "value": [0],
+        "max": 6
+      },
+      "5": {
+        "value": [0],
+        "max": 6
+      },
+      "6": {
+        "value": [0],
+        "max": 6
+      },
+      "7": {
+        "value": [0],
+        "max": 6
+      },
+      "8": {
+        "value": [0],
+        "max": 6
+      },
+      "9": {
+        "value": [0],
+        "max": 6
+      },
     "max": 6,
     "max_default": 6,
     "list": [0]
+    }
   },
   "class": {
     "templates": ["default", "logic", "activatedEffect"],

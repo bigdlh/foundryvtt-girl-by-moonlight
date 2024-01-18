@@ -257,12 +257,12 @@
       <div id="{{id}}-stress-trauma" class="section big-teeth-section" data-item-id="{{item._id}}">  
         <div class="big-teeth">
         {{#multiboxes item.value}}
-          <input type="radio" id="friend-0" name="item.value{{id}}" value="0" dtype="Radio">
+          <input type="radio" id="friend-0" name="items.friend.{{id}}.value" value="0" dtype="Radio">
           <div id="transcendence-vice">
-              <label class="black-label" for="friend-0">{{concat "item.value" id}}</label>
+              <label class="black-label" for="friend-0">{{item.value}}</label>
             </div>
           {{#times_from_1 6}}
-            <input type="radio" id="friend-{{this}}" name="item.value{{id}}" value="{{this}}" dtype="Radio">
+            <input type="radio" id="friend-{{this}}" name="items.friend.{{id}}.value" value="{{this}}" dtype="Radio">
             <label for="friend-{{this}}"></label>
           {{/times_from_1}}
         {{/multiboxes}}
