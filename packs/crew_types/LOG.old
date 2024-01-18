@@ -1,5 +1,5 @@
-2024/01/18-15:42:42.752 1018 Log #96: 0 ops saved to Table #97 OK
-2024/01/18-15:42:42.752 1018 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\crew_types/000096.log: OK
-2024/01/18-15:42:42.756 1018 Table #33: 3 entries OK
-2024/01/18-15:42:42.758 1018 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\crew_types/MANIFEST-000095: OK
-2024/01/18-15:42:42.761 1018 **** Repaired leveldb F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\crew_types; recovered 1 files; 851 bytes. Some data may have been lost. ****
+2024/01/18-17:34:42.570 c4 Log #99: 0 ops saved to Table #100 OK
+2024/01/18-17:34:42.570 c4 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\crew_types/000099.log: OK
+2024/01/18-17:34:42.570 c4 Table #33: 3 entries OK
+2024/01/18-17:34:42.572 c4 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\crew_types/MANIFEST-000098: OK
+2024/01/18-17:34:42.575 c4 **** Repaired leveldb F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\crew_types; recovered 1 files; 851 bytes. Some data may have been lost. ****
