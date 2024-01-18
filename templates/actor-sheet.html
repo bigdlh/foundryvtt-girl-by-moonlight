@@ -297,7 +297,7 @@
       <br>
       <div>
         <label class="label-stripe">Spend links on allies: </label>
-        <a>You or linked protagonist recover 2 stress<br>They ignore 1 harm tag<br>Grant +1d to ally's action<br>Prevent their eclipse on a 4/5 result</a>
+        <label>You or linked protagonist recover 2 stress<br>They ignore 1 harm tag<br>Grant +1d to ally's action<br>Prevent their eclipse on a 4/5 result</label>
       </div>
     </div>
   </div>
@@ -320,7 +320,7 @@
           <div>
             {{#each items as |item id|}}
               {{#if (eq item.type "class")}}
-                <a>{{{item.system.eclipse}}}</a>
+                <label>{{{item.system.eclipse}}}</label>
               {{/if}}
             {{/each}}
           </div>
