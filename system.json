@@ -61,7 +61,7 @@
     },
     {
       "name": "ability",
-      "label": "Abilities",
+      "label": "Ability",
       "system": "girl-by-moonlight",
       "path": "packs/abilities",
       "type": "Item",
@@ -97,7 +97,7 @@
     },
     {
       "name": "crew_ability",
-      "label": "Series Abilities",
+      "label": "Series Ability",
       "system": "girl-by-moonlight",
       "path": "packs/crew_abilities",
       "type": "Item",
@@ -125,18 +125,6 @@
       "system": "girl-by-moonlight",
       "path": "packs/journal",
       "type": "JournalEntry",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "friend",
-      "label": "Friends",
-      "system": "girl-by-moonlight",
-      "path": "packs/friends",
-      "type": "Item",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"

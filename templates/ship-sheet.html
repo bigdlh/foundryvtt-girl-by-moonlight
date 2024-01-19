@@ -27,73 +27,11 @@
             {{/if}}
           {{/each}}
         </div>
-
-		    <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="ship_size">{{localize "BITD.ShipSize"}}</a></div>
-          {{#each items as |item id|}}
-            {{#if (eq item.type "ship_size")}}
-              <div class="item flex-horizontal" data-item-id="{{item._id}}">
-                <div class="item-body flex-horizontal">
-                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                  <div class="tooltip">
-                    <a class="item-name">{{item.name}}</a>
-                    <span class="tooltiptext">{{{item.system.description}}}</span>
-                  </div>
-                </div>
-                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-              </div>
-            {{/if}}
-          {{/each}}
-        </div>
-
       </div>
     </div>
 
     <div class="grow-two">
-      <div id="designation">
-        <label for="ship-{{id}}-designation">{{localize "BITD.Designation"}}</label>
-        <input type="text" id="ship-{{_id}}-designation" name="system.designation" value="{{system.designation}}">
-      </div>
-
-      <div id="look">
-        <label for="ship-{{_id}}-look">{{localize "BITD.Colors"}}</label>
-        <input type="text" id="ship-{{_id}}-look" name="system.look" value="{{system.look}}">
-      </div>
-
-      <div id="coins" class="flex-horizontal">
-        <div id="coins-hands">
-			    <div class="stripe">
-				    <label for="coins-{{_id}}-hands-0">{{localize "BITD.Coin"}} <i class="fab fa-creative-commons-zero nullifier"></i></label>
-			    </div>
-			    <div class="coins coins-hands">
-			      {{#multiboxes system.coins}}
-			        <input type="radio" id="coins-{{_id}}-hands-0" name="system.coins" value="0" checked="checked">
-			        {{#times_from_1 system.coinsMax}}
-                <input type="radio" id="coins-{{../_id}}-hands-{{this}}" name="system.coins" value="{{this}}">
-			          <label for="coins-{{../_id}}-hands-{{this}}"></label>
-              {{/times_from_1}}
-			      {{/multiboxes}}
-			    </div>
-		    </div>
-
-		    {{#if (eq system.installs.vault_inst 1)}}
-		      <div id="vault">
-			      <div class="stripe">
-			        <label for="coins-{{_id}}-vault-0">{{localize "BITD.Vault"}} <i class="fab fa-creative-commons-zero nullifier"></i></label>
-			      </div>
-			      <div class="coins coins-hands">
-			        {{#multiboxes system.vault}}
-			          <input type="radio" id="coins-{{_id}}-vault-0" name="system.vault" value="0" checked="checked">
-			          {{#times_from_1 4}}
-                  <input type="radio" id="coins-{{../_id}}-vault-{{this}}" name="system.vault" value="{{this}}">
-			            <label for="coins-{{../_id}}-vault-{{this}}"></label>
-                {{/times_from_1}}
-			        {{/multiboxes}}
-			      </div>
-		      </div>
-		    {{/if}}
-
+      <div id="gambits-container" class="flex-vertical">
 		    <div id="coins-debt">
           <div class="stripe">
 			      <label for="coins-{{_id}}-debt-0">{{localize "BITD.Debt"}} <i class="fab fa-creative-commons-zero nullifier"></i></label>
@@ -101,26 +39,23 @@
 			    <div class="coins debt">
 			      {{#multiboxes system.debt}}
               <input type="radio" id="coins-{{_id}}-debt-0" name="system.debt" value="0" checked="checked">
-              {{#times_from_1 8}}
+              {{#times_from_1 15}}
                 <input type="radio" id="coins-{{../_id}}-debt-{{this}}" name="system.debt" value="{{this}}">
 			          <label for="coins-{{../_id}}-debt-{{this}}"></label>
               {{/times_from_1}}
 			      {{/multiboxes}}
 			    </div>
         </div>
-      </div>
-
-	    <div id="gambits-container" class="flex-horizontal">
         <div id="gambits">
 	  		  <div class="stripe">
 	  		    <label for="gambits-{{_id}}-0">{{localize "BITD.Gambits"}}
-	  		      <i class="fab fa-creative-commons-zero nullifier"></i>  ({{localize "BITD.GambitRefresh1"}} {{system.gambits.refresh}} {{localize "BITD.GambitRefresh2"}})
+	  		      <i class="fab fa-creative-commons-zero nullifier"></i>
             </label>
           </div>
 	  		  <div class="coins gambits">
             {{#multiboxes system.gambits.value}}
 	  		      <input type="radio" id="gambits-{{_id}}-0" name="system.gambits.value" value="0" checked="checked">
-              {{#times_from_1 system.gambits.max}}
+              {{#times_from_1 15}}
 	  		        <input type="radio" id="gambits-{{../_id}}-{{this}}" name="system.gambits.value" value="{{this}}">
 	  		        <label for="gambits-{{../_id}}-{{this}}"></label>
               {{/times_from_1}}
@@ -138,9 +73,10 @@
     <div class="tab-content flex-vertical grow-two">
       {{!-- Nav menu --}}
       <nav class="tabs flex-horizontal">
-        <a class="item" data-tab="abilities">{{localize "BITD.SpecialAbilities"}}</a>
+        <a class="item" data-tab="abilities">Abilities</a>
         <a class="item" data-tab="upgrades">{{localize "BITD.Upgrades"}}</a>
-	      <a class="item" data-tab="friends">{{localize "BITD.Contacts"}}</a>
+	      <a class="item" data-tab="series">Series Info</a>
+        <a class="item" data-tab="friends">{{localize "BITD.Contacts"}}</a>
 	      <a class="item" data-tab="character-notes">{{localize "BITD.Notes"}}</a>
         {{#if isGM}}
           <a class="item" data-tab="effects">{{localize "BITD.Effects"}}</a>
@@ -150,8 +86,7 @@
 
       <div id="abilities" class="tab flex-vertical" data-tab="abilities">
         <div class="label-stripe">
-          <p>{{localize "BITD.SpecialAbilities"}}
-          <a class="item-add-popup" data-item-type="crew_ability" data-limiter=system.ship_class><i class="fas fa-plus-square"></i></a></p>
+          <p>{{localize "BITD.SpecialAbilities"}}</p>
           <div id="ship-experience" class="teeth-experience tooltip">
             <label for="ship-{{_id}}-experience-0">{{localize "BITD.PExperience"}}<i class="fab fa-creative-commons-zero nullifier"></i>
               <span class="tooltiptext left">{{localize "BITD.CrewExpClueDescription"}}<br />{{localize "BITD.CrewExpClue2"}}<br />{{localize "BITD.CrewExpClue3"}}<br />{{localize "BITD.CrewExpClue4"}}<br />{{localize "BITD.CrewExpClue5"}}<br />
@@ -186,15 +121,14 @@
               </div>
             {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="crew_ability">{{localize "BITD.AddAbility"}}</a></div>
         </div>
       </div>
 
       {{!-- Owned Items Tab --}}
       <div id="upgrades" class="tab flex-vertical" data-tab="upgrades">
         <div class="label-stripe">
-          <p>{{localize "BITD.Upgrades"}}
-          <a class="item-add-popup" data-item-type="crew_upgrade"><i class="fas fa-plus-square"></i></a></p>
+          <p>{{localize "BITD.Upgrades"}}</p>
+<!--            <a class="item-add-popup" data-item-type="crew_upgrade"><i class="fas fa-plus-square"></i></a> -->
         </div>
         <div>
           {{#each items as |item id|}}
@@ -210,15 +144,14 @@
               </div>
             {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="crew_upgrade">{{localize "BITD.AddUpgrade"}}</a></div>
+<!--          <div class="item-class-label"><a class="item-add-popup" data-item-type="crew_upgrade">{{localize "BITD.AddUpgrade"}}</a></div> -->
         </div>
       </div>
 
 	    {{!-- Friends Tab --}}
       <div id="friends" class="tab flex-vertical" data-tab="friends">
 		    <div class="label-stripe">
-		      <p>{{localize "BITD.Contacts"}}
-          <a class="item-add-popup" data-item-type="friend"><i class="fas fa-plus-square"></i></a></p>
+		      <p>{{localize "BITD.Contacts"}}</p>
         </div>
         <div id="friend-list">
           {{#each items as |item id|}}
@@ -235,7 +168,6 @@
 			        </div>
             {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="friend">{{localize "BITD.AddFriend"}}</a></div>
         </div>
       </div>
 
@@ -247,6 +179,26 @@
 		    {{#if editable}}
           <button type="submit" name="submit"><i class="fas fa-feather-alt"></i> {{localize "JOURNAL.Submit"}}</button>
         {{/if}}
+      </div>
+
+      <div class="tab flex-vertical" data-tab="series">
+        <div class="label-stripe">
+          <p>The Conspiracy</p>
+        </div>
+        {{#each items as |item id|}}
+          {{#if (eq item.type "crew_type")}}
+            <div class="grow-two">
+            <label class="label-stripe">Judgement Calls</label>
+            <p>{{{item.system.judgementCalls}}}</p>
+            </div>
+            <div class="grow-two">
+            <label class="label-stripe">Director Principles</label>
+            <p>{{{item.system.directorPrinciples}}}</p>
+            </div>
+            <label class="label-stripe">Series Agenda</label>
+            <p>{{{item.system.seriesAgenda}}}</p>
+          {{/if}}
+        {{/each}}
       </div>
 
       {{!-- Active Effects --}}
@@ -276,106 +228,6 @@
         {{/each}}
       </div>
     </div>
-
-    {{!-- Attributes --}}
-	  <div id="systems">
-		  {{#each system.systems as |system system_name|}}
-		    {{#unless (eq system.max 0)}}
-		      <div id="systems-{{system_name}}" class="system">
-			      <div id="systems-{{system_name}}-title" class="systems-value">
-		  		    <div class="stripe flex-horizontal system-label">
-	  			      {{#if (eq system_name "upkeep")}}
-	  			        <a class="roll-die-attribute rollable-text tooltip" data-roll-attribute="{{system_name}}">{{localize (concat system.label 'Short')}}
-                    <span class="tooltiptext left">{{{localize system.tip}}}</span>
-                  </a>
-                  <span style="margin-right: 5px;"> = {{system.value}} {{localize "BITD.Coin"}}</span>
-	  			      {{/if}}
-	  			      {{#if (eq system_name "shields")}}
-	  			        <span class="system-label tooltip">{{localize (concat system.label 'Short')}}
-                    <span class="tooltiptext left">{{{localize system.tip}}}</span>
-                  </span>
-		  		      {{/if}}
-		  		      {{#if (eq system_name "encryptor")}}
-		  		        <span class="system-label tooltip">{{localize (concat system.label 'Short')}}
-                    <span class="tooltiptext left">{{{localize system.tip}}}</span>
-                  </span>
-			  	      {{/if}}
-			  	      {{#unless (eq system_name "upkeep")}}
-			  	        {{#unless (eq system_name "shields")}}
-			  	          {{#unless (eq system_name "encryptor")}}
-			  	            <a class="system-label roll-die-attribute rollable-text tooltip" data-roll-attribute="{{system_name}}">{{localize (concat system.label 'Short')}}
-                        <span class="tooltiptext left">{{{localize system.tip}}}</span>
-                      </a>
-				            {{/unless}}
-				          {{/unless}}
-				        {{/unless}}
-			          {{#unless (eq system_name "upkeep")}}
-	  		          <div class="stripe-tooth-body-blue">
-	  			          {{#multiboxes system.value}}
-	  			            <label for="{{../_id}}-{{system_name}}-value-0"><i class="fab fa-creative-commons-zero nullifier"></i></label>
-	  			            <input type="radio" id="{{../_id}}-{{system_name}}-value-0" name="system.systems.{{system_name}}.value" value="0">
-                      {{#times_from_1 system.max}}
-	  			                <input type="radio" id="{{../../_id}}-{{system_name}}-value-{{this}}" name="system.systems.{{system_name}}.value" value="{{this}}">
-	  			                <label for="{{../../_id}}-{{system_name}}-value-{{this}}"></label>
-	  			            {{/times_from_1}}
-                    {{/multiboxes}}
-	  		          </div>
-	  		        {{/unless}}
-	  		      </div>
-	  		    </div>
-	  		    {{#unless (eq system_name "crew")}}
-	  		      <div id="systems-{{system_name}}-damage" class="systems-value">
-	  			      <div class="stripe-damage flex-horizontal system-label-damage">
-	  			        {{#if (eq system_name "upkeep")}}
-	  			          {{localize "BITD.SystemsSkips"}}
-	  			        {{/if}}
-	  			        {{#unless (eq system_name "upkeep")}}
-	  			          {{localize "BITD.SystemsDamage"}}
-	  			        {{/unless}}
-                  <div class="stripe-tooth-body-red">
-	  			          {{#multiboxes system.damage}}
-                      <label for="{{../_id}}-{{system_name}}-damage-0"><i	class="fab fa-creative-commons-zero nullifier"></i></label>
-	  			            <input type="radio" id="{{../_id}}-{{system_name}}-damage-0" name="system.systems.{{system_name}}.damage" value="0">
-                      {{#times_from_1 system.max}}
-	  		                <input type="radio" id="{{../../_id}}-{{system_name}}-damage-{{this}}" name="system.systems.{{system_name}}.damage" value="{{this}}">
-	  		                <label for="{{../../_id}}-{{system_name}}-damage-{{this}}"></label>
-	  			            {{/times_from_1}}
-                    {{/multiboxes}}
-		  	          </div>
-		  	        </div>
-		  	      </div>
-              <div id="system-upgrades" class="systems-value">
-		  		      {{#each ../items as |item id|}}
-                  {{#if (eq item.type "crew_upgrade")}}
-                    {{#if (caseeq item.system.class system_name)}}
-                      {{!-- Special handling to prevent Quantum Encryptor from showing up as Comms item, translation friendly --}}
-                      {{#unless (eq item.effects.[0].changes.[0].key "system.systems.encryptor.max")}}
-                        <div class="label-stripe-gray item flex-horizontal system-label" data-item-id="{{item._id}}">
-			  		            <div class="item-body">
-			  		             <a class="item-name">{{item.name}}</a>
-                          </div>
-                          <div id="system-subitem" class="stripe-tooth-body-red">
-                            <label for="item-{{id}}-0"><i class="fab fa-creative-commons-zero nullifier"></i></label>
-                            {{#multiboxes item.system.is_damaged}}
-                              <input class="update-box" data-utype="is_damaged" data-item="{{item._id}}" data-value="0"  type="radio" id="item-{{id}}-0" value="0" dtype="Radio">
-					                    {{#times_from_1 1}}
-					      	              <input class="update-box" data-utype="is_damaged" data-item="{{item._id}}" data-value="{{this}}" type="radio" id="item-{{id}}-{{this}}" value="{{this}}" dtype="Radio">
-					  			              <label for="item-{{id}}-{{this}}"></label>
-					  		              {{/times_from_1}}
-					  		            {{/multiboxes}}
-					  		          </div>
-                        </div>
-                      {{/unless}}
-                    {{/if}}
-                  {{/if}}
-                {{/each}}
-              </div>
-            {{/unless}}
-          </div>
-		      <br>
-        {{/unless}}
-  		{{/each}}
-
 	  </div>
   </section>
 

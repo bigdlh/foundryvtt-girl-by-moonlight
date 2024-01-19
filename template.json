@@ -364,7 +364,10 @@
   "crew_type": {
     "templates": ["default", "logic", "activatedEffect"],
 	"def_abilities": "",
-	"experience_clues": ""
+	"experience_clues": "",
+  "seriesAgenda": "",
+  "judgementCalls": "",
+  "directorPrinciples": ""
   },
   "crew_upgrade": {
     "templates": ["ability", "logic", "activatedEffect"],

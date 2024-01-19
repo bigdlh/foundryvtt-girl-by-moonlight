@@ -16,8 +16,12 @@
     <div><i>- {{localize "BITD.CrewExpClue4"}}</i></div>
     <div><i>- {{localize "BITD.CrewExpClue5"}}</i></div>
     <br>
-    <label class="label-stripe">{{localize "BITD.ClassExpClue"}}</label>
-    {{{editor system.experience_clues target="system.experience_clues" button=true owner=owner editable=editable}}}
+    <label class="label-stripe">Series Agenda</label>
+    {{{editor system.seriesAgenda target="system.seriesAgenda" button=true owner=owner editable=editable}}}
+    <label class="label-stripe">Judgement Calls</label>
+    {{{editor system.judgementCalls target="system.judgementCalls" button=true owner=owner editable=editable}}}
+    <label class="label-stripe">Director Principles</label>
+    {{{editor system.directorPrinciples target="system.directorPrinciples" button=true owner=owner editable=editable}}}
     {{#if isGM}}
       <label class="label-stripe">{{localize "BITD.AddUpgrades"}}</label>
       <textarea name="system.def_abilities">{{system.def_abilities}}</textarea>
