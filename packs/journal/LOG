@@ -1,3 +1,5 @@
-2024/01/19-01:25:24.527 6db4 Recovering log #32
-2024/01/19-01:25:24.532 6db4 Delete type=0 #32
-2024/01/19-01:25:24.533 6db4 Delete type=3 #31
+2024/01/19-03:23:19.311 3ae4 Recovering log #34
+2024/01/19-03:23:19.311 3ae4 Level-0 table #36: started
+2024/01/19-03:23:19.315 3ae4 Level-0 table #36: 33255 bytes OK
+2024/01/19-03:23:19.320 3ae4 Delete type=0 #34
+2024/01/19-03:23:19.321 3ae4 Delete type=3 #33
