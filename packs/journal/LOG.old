@@ -1,5 +1,1 @@
-2024/01/18-17:34:42.631 6e6c Log #25: 0 ops saved to Table #26 OK
-2024/01/18-17:34:42.631 6e6c Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\journal/000025.log: OK
-2024/01/18-17:34:42.631 6e6c Table #14: 50 entries OK
-2024/01/18-17:34:42.634 6e6c Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\journal/MANIFEST-000024: OK
-2024/01/18-17:34:42.637 6e6c **** Repaired leveldb F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\journal; recovered 1 files; 66630 bytes. Some data may have been lost. ****
+2024/01/18-17:34:42.644 6e6c Delete type=3 #1

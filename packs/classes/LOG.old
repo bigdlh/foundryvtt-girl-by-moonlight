@@ -1,6 +1,1 @@
-2024/01/18-17:34:42.522 5330 Log #230: 1 ops saved to Table #231 OK
-2024/01/18-17:34:42.522 5330 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\classes/000230.log: OK
-2024/01/18-17:34:42.522 5330 Table #219: 6 entries OK
-2024/01/18-17:34:42.522 5330 Table #231: 1 entries OK
-2024/01/18-17:34:42.525 5330 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\classes/MANIFEST-000229: OK
-2024/01/18-17:34:42.528 5330 **** Repaired leveldb F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\classes; recovered 2 files; 6956 bytes. Some data may have been lost. ****
+2024/01/18-17:34:42.535 5330 Delete type=3 #1
