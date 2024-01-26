@@ -17,9 +17,6 @@
   <div class="die {{roll_status}}">{{localize "BITD.RollCriticalSuccess"}}</div>
   <div class="description">
     <p>{{{localize "BITD.RollDoWithIncreasedEffect"}}}</p>
-	{{#if (eq position "risky")}}
-	<p>{{{localize "BITD.RollGambit"}}}</p>
-	{{/if}}
 	{{#if (eq position "desperate")}}
 	<p>{{{localize "BITD.RollXP"}}}</p>
 	{{/if}}
@@ -30,9 +27,6 @@
   <div class="die {{roll_status}}">{{localize "BITD.RollSuccess"}}</div>
   <div class="description">
     <p>{{{localize "BITD.RollDo"}}}</p>
-    {{#if (eq position "risky")}}
-	<p>{{{localize "BITD.RollGambit"}}}</p>
-	{{/if}}
 	{{#if (eq position "desperate")}}
 	<p>{{{localize "BITD.RollXP"}}}</p>
 	{{/if}}

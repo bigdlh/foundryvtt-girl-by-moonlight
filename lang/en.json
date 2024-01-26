@@ -164,7 +164,6 @@
   "BITD.RollFailurePositionControlled": "You falter. Press on by seizing a <strong>risky</strong> opportunity, or withdraw and try a different approach.",
   "BITD.RollFailurePositionRisky": "Things go badly. You suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you end up in a <strong>desperate</strong> position, you <strong>lose this opportunity</strong>.",
   "BITD.RollFailurePositionDesperate": "It’s the worst outcome. You suffer <strong>severe harm</strong>, a <strong>serious complication occurs</strong>, you <strong>lose this opportunity for action</strong>.",
-  "BITD.RollGambit": "If you didn't spend a <strong>gambit</strong> on this roll, gain one <strong>gambit</strong>.",
   "BITD.RollXP": "Mark <strong>XP</strong> for the related attribute.",
 
   "BITD.RollGreatEffect": "Great Effect",
@@ -204,6 +203,7 @@
   "BITD.EffectGreat": "Great",
 
   "BITD.SkillsSun": "Sun",
+  "BITD.Insight": "Sun",
   "BITD.SkillsSunShort": "Sun",
   "BITD.SkillsSunTip": "Sun represents a character’s compassion and resolve. Roll sun when you resist a consequence of violence or fear.<br><br>",
   "BITD.SkillsDefy": "Defy",
@@ -225,9 +225,9 @@
 
   "BITD.SkillsStars": "Stars",
   "BITD.SkillsStarsShort": "Stars",
-  "BITD.SkillsStarsTip": "Stars represents a character’s cleverness and elegance. Roll stars when you resist a consequence of panic or social pressure.<br><br>You might study an ancient book for information on magic rituals. You might discern a gap in your foe’s defences.<br><br>You could analyze a piece of music to understand its beauty (but Perceive might be better).",
+  "BITD.SkillsStarsTip": "Stars represents a character’s cleverness and elegance. Roll stars when you resist a consequence of panic or social pressure.",
   "BITD.SkillsAnalyze": "Analyze",
-  "BITD.SkillsAnalyzeTip": "When you Analyze, you search beyond the surface presentation of the world, and discover secrets. You might study an ancient book for information on magic rituals. You might discern a gap in your foe’s defences.<br><br>You could analyze a piece of music to understand its beauty (but perceive might be better).",
+  "BITD.SkillsAnalyzeTip": "When you Analyze, you search beyond the surface presentation of the world, and discover secrets. <br><br>You might study an ancient book for information on magic rituals. You might discern a gap in your foe’s defences.<br><br>You could analyze a piece of music to understand its beauty (but Perceive might be better).",
   "BITD.SkillsConceal": "Conceal",
   "BITD.SkillsConcealTip": "When you Conceal, you hide your true intentions and feelings.<br><br>You might pass unnoticed, as just another face in the crowd. You might choke down your true feelings and lie to someone.<br><br>You could try sneaking through the rafters of an old building (but Flow might be better).",
   "BITD.SkillsFlow": "Flow",
