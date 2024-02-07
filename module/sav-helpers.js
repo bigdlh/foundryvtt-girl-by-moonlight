@@ -163,7 +163,7 @@ export class SaVHelpers {
 
     // There has to be a better way to to do this
     // @todo - pull skill list dynamically
-    const skills = ["sun","defy","empathise","express","moon","confess","forgive","perceive","stars","analyze","conceal","flow","transcendence"];
+    const skills = ["sun","defy","empathise","express","moon","confess","forgive","perceive","stars","analyze","conceal","flow"];
     const systems = ["crew","upkeep","engines","comms","weapons","hull","shields","encryptor"];
 
     if (skills.indexOf(attribute_name) !== -1 ) {

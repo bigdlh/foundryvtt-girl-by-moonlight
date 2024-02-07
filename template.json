@@ -173,7 +173,7 @@
             "value": [0],
             "max": 4
           },
-          "consort": {
+          "flow": {
             "label": "BITD.SkillsFlow",
 	        "tip": "BITD.SkillsFlowTip",
             "value": [0],
