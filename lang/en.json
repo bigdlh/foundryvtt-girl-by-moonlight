@@ -318,6 +318,7 @@
   "BITD.ResistanceHelp": "Roll 1d per action rating for the relevant attribute to reduce or completely avoid (GM's choice) the effects of consequences.<br>Take 6 minus the highest die result as <strong>stress</strong><br><strong>Sun:</strong> consequence of violence or fear<br><strong>Moon:</strong> consequence of despair or heartbreak<br><strong>Stars:</strong> consequence of panic or social pressure",
   "BITD.CrewHelp": "Roll 1d per crew rating to test the effectiveness of tools, weapons, or resources.  Add +1d for <strong>fine</strong> items.",
   "BITD.UpkeepHelp": "Roll 1d per consecutive upkeep payment skips (including this one), reflecting wear and tear on your ship that may result in future consequences.",
+  "BITD.TranscendantAbility": "Transcendant Ability",
 
   "BITD.Name": "Name",
   "BITD.CampaignName": "Campaign Name",

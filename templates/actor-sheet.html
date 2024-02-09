@@ -99,7 +99,7 @@
       {{#multiboxes system.transcendence.value}}
         <input type="radio" id="character-{{_id}}-transcendence-0" name="system.transcendence.value" value="0" dtype="Radio">
         <div id="transcendence-vice">
-	        <label class="black-label" for="character-{{_id}}-transcendence-0">{{localize "BITD.Transcendence"}}</label>
+	        <label id="teal" class="black-label" for="character-{{_id}}-transcendence-0">{{localize "BITD.Transcendence"}}</label>
 	      </div>
         {{#times_from_1 4}}
           <input type="radio" id="character-{{../_id}}-transcendence-{{this}}" name="system.transcendence.value" value="{{this}}" dtype="Radio">
@@ -219,21 +219,11 @@
 
         <div id="abilities-list">
           {{#each items as |item|}}
-          {{#if (eq item.type "ability")}}
-            <div class="item flex-horizontal" data-item-id="{{item._id}}">
-              <div class="item-body flex-horizontal">
-                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-				        <a class="item-name">{{item.name}}</a>
-                <div class="item-description">{{{item.system.description}}}</div>
-              </div>
-              <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-              <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-            </div>
-          {{/if}}
-          {{#if (eq item.type "crew_ability")}}
-		          <div class="item flex-horizontal" data-item-id="{{item._id}}">
+          {{#unless item.system.transcendant}}
+            {{#if (eq item.type "ability")}}
+              <div class="item flex-horizontal" data-item-id="{{item._id}}">
                 <div class="item-body flex-horizontal">
-				          <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                   <a class="item-name">{{item.name}}</a>
                   <div class="item-description">{{{item.system.description}}}</div>
                 </div>
@@ -241,8 +231,50 @@
                 <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
               </div>
             {{/if}}
+            {{#if (eq item.type "crew_ability")}}
+                <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                  <div class="item-body flex-horizontal">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                    <a class="item-name">{{item.name}}</a>
+                    <div class="item-description">{{{item.system.description}}}</div>
+                  </div>
+                  <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                  <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+                </div>
+              {{/if}}
+            {{/unless}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize "BITD.AddAbility"}}</a></div>
+
+          <div id="teal" class="label-stripe">
+            <label>Transcendant Abilities</label>
+          </div>
+
+          {{#each items as |item|}}
+          {{#if item.system.transcendant}}
+            {{#if (eq item.type "ability")}}
+              <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                <div class="item-body flex-horizontal">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                  <a class="item-name">{{item.name}}</a>
+                  <div class="item-description">{{{item.system.description}}}</div>
+                </div>
+                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              </div>
+            {{/if}}
+            {{#if (eq item.type "crew_ability")}}
+                <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                  <div class="item-body flex-horizontal">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                    <a class="item-name">{{item.name}}</a>
+                    <div class="item-description">{{{item.system.description}}}</div>
+                  </div>
+                  <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                  <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+                </div>
+              {{/if}}
+            {{/if}}
+          {{/each}}
         </div>
       </div>
       

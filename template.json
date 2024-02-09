@@ -299,7 +299,8 @@
       "class": "",
       "price": 1,
       "starting": false,
-      "recommended": false
+      "recommended": false,
+      "transcendant": false
     },
     "logic": {
       "logic": ""

@@ -42,11 +42,29 @@
 
     </div>
   {{/each}}
+  <br>
+
+  <div class="stripe">
+    <b>Bonus Die</b>
+  </div>
+  <div class="blurbbox">
+    <label><strong>Push yourself</strong> (take 2 stress) or accept a <strong>Poisoned Promise</strong> </label>
+  </div>
+  <br>
+
+  <div class="stripe">
+    <b>Teamwork</b>
+  </div>
+  <div class="blurbbox">
+    <label class="halfcolumn"><strong>• Assist</strong> a teammate<br><strong>• Lead</strong> a group action</label>
+    <label class="halfcolumn"><strong>• Set up</strong> a teammate<br><strong>• Protect</strong> a group action</label>
+  </div>
+  <br>
 
   <div class="stripe">
     <b>Gather Information</b>
   </div>
-  <div class="grow-two">
+  <div class="blurbbox">
     <div>
       {{#each items as |item id|}}
         {{#if (eq item.type "class")}}
@@ -55,5 +73,5 @@
       {{/each}}
     </div>
   </div>
-</div>>
+</div>
 

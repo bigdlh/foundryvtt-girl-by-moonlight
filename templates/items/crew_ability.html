@@ -26,6 +26,12 @@
 
       <label class="label-stripe">{{localize "BITD.RecommendedAbility"}}</label>
       <input id="recommended" type="checkbox" name="system.recommended" {{checked system.recommended}}>
+
+      <div class="flex-vertical grow-two">
+        <label class="label-stripe">{{localize "BITD.TranscendantAbility"}}</label>
+        <input id="transcendant" type="checkbox" name="system.transcendant" {{checked system.transcendant}}>
+      </div>
+      
       {{#if isGM}}
         <div class="label-stripe">{{localize "BITD.Effects"}}</div>
         <div id="effects">{{> "systems/girl-by-moonlight/templates/parts/active-effects.html"}}</div>

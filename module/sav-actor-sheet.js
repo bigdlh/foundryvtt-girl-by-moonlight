@@ -14,7 +14,7 @@ export class SaVActorSheet extends SaVSheet {
 		return foundry.utils.mergeObject(super.defaultOptions, {
   	  classes: [ "girl-by-moonlight", "sheet", "actor" ],
   	  template: "systems/girl-by-moonlight/templates/actor-sheet.html",
-      width: 800,
+      width: 880,
       height: 970,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}],
 	    scrollY: [".description"]

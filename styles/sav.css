@@ -336,6 +336,14 @@
   margin-right: 10px;
   /* Trauma */
 }
+* .big-teeth-teal-section {
+  border-top: 3px solid #008c8f;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  /* Trauma */
+}
 * .big-teeth-section > * {
   margin-right: 10px;
 }
@@ -349,6 +357,7 @@
   display: flex;
   /* Hide the browser's default checkbox */
 }
+
 * .big-teeth-section .big-teeth label {
   height: 50px;
   width: 17px;
@@ -2110,11 +2119,13 @@ padding: 0px;
 
 .charactercolumn {
   float: left;
-  width: 40%;
+  width: 38%;
+  margin-right: 5px;
 }
 .playbookcolumn {
   float: left;
-  width: 40%;
+  width: 42%;
+  margin-right: 5px;
 }
 .skillscolumn {
   float: left;
@@ -2148,4 +2159,20 @@ padding: 0px;
   text-indent: 10px ;
 }
 
+#teal {
+  background-color: #008c8f;
+  border-top: 3px solid #008c8f;
+}
+
+.blurbbox {
+  background-color: #cad5de;
+}
+
+.tealbar {
+  border-top: 3px solid #008c8f;
+}
+
+.bluebar {
+  border-top: 3px solid #127591;
+}
 /*# sourceMappingURL=sav.css.map */

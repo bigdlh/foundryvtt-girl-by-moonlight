@@ -14,8 +14,8 @@ export class GBMLegitSheet extends SaVSheet {
 		return foundry.utils.mergeObject(super.defaultOptions, {
   	  classes: [ "girl-by-moonlight", "sheet", "actor" ],
   	  template: "systems/girl-by-moonlight/templates/actor-sheet-legit.html",
-      width: 1100,
-      height: 820,
+      width: 1250,
+      height: 800,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}],
 	    scrollY: [".description"]
     });
