@@ -2119,17 +2119,13 @@ padding: 0px;
 
 .charactercolumn {
   float: left;
-  width: 38%;
+  width: 35%;
   margin-right: 5px;
 }
 .playbookcolumn {
   float: left;
   width: 42%;
   margin-right: 5px;
-}
-.skillscolumn {
-  float: left;
-  width: 10%;
 }
 
 .halfcolumn {
