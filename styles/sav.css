@@ -333,15 +333,16 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 0px;
+  margin-right: 10px;
   /* Trauma */
 }
 * .big-teeth-section > * {
   margin-right: 10px;
 }
-* .big-teeth-section > *:last-child {
+* .big-teeth-section > *:first-child {
   margin-right: 0px;
 }
-* .big-teeth-section:last-child {
+* .big-teeth-section:first-child {
   margin-right: 0px;
 }
 * .big-teeth-section .big-teeth {
@@ -1563,7 +1564,7 @@
 * .tooltip .tooltiptext {
   visibility: collapse;
   opacity: 0;
-  width: 240px;
+  width: 300px;
   background-color: #191813;
   color: #EEEFFF;
   text-align: left;
@@ -2106,4 +2107,45 @@ padding: 0px;
   vertical-align: middle;
   justify-content: center;
 }
+
+.charactercolumn {
+  float: left;
+  width: 40%;
+}
+.playbookcolumn {
+  float: left;
+  width: 40%;
+}
+.skillscolumn {
+  float: left;
+  width: 10%;
+}
+
+.halfcolumn {
+  float: left;
+  width: 50%;
+}
+.linkscolumn{
+  float: left;
+  width: 50%;
+}
+
+.linkshintcolumn{
+  float: left;
+  justify-content: center;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hangingindent {
+  padding-left: -10px ;
+  text-indent: 10px ;
+}
+
 /*# sourceMappingURL=sav.css.map */

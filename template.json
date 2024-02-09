@@ -14,7 +14,7 @@
     "promise1": "",
     "promise2": "",
     "link0": {
-      "value": 0,
+      "value": [0],
       "max": 6,
       "max_default": 6
     },

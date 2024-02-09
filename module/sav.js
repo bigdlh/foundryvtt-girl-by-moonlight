@@ -13,6 +13,7 @@ import { SaVActor } from "./sav-actor.js";
 import { SaVItem } from "./sav-item.js";
 import { SaVItemSheet } from "./sav-item-sheet.js";
 import { SaVActorSheet } from "./sav-actor-sheet.js";
+import { GBMLegitSheet } from "./gmb-legit-sheet.js"
 import { SaVNPCSheet } from "./sav-npc-sheet.js";
 import { SaVShipSheet } from "./sav-ship-sheet.js";
 import { SaVFactionStatusSheet } from "./sav-faction-status-sheet.js";
@@ -50,6 +51,7 @@ Hooks.once("init", async function() {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("girl-by-moonlight", SaVActorSheet, { types: ["character"], makeDefault: true });
+  Actors.registerSheet("girl-by-moonlight", GBMLegitSheet, { types: ["character"], makeDefault: false });
   Actors.registerSheet("girl-by-moonlight", SaVNPCSheet, { types: ["npc"], makeDefault: true });
   Actors.registerSheet("girl-by-moonlight", SaVShipSheet, { types: ["ship"], makeDefault: true });
   Actors.registerSheet("girl-by-moonlight", SaVClockSheet, { types: ["\uD83D\uDD5B clock"], makeDefault: true });
@@ -113,6 +115,10 @@ Hooks.once("init", async function() {
   Handlebars.registerHelper('noteq', (a, b, options) => {
     return (a !== b) ? options.fn(this) : '';
   });
+
+  Handlebars.registerHelper('notEquals', function(arg1, arg2, options) {
+    return (arg1 !== arg2) ? options.fn(this) : options.inverse(this);
+});
 
   //Case-insensitive comparison
   Handlebars.registerHelper('caseeq', (a, b) => {
