@@ -329,9 +329,10 @@
         {{/multiboxes}}
       </div>
     </div>    
+
       {{#each items as |item id|}}
         {{#if (eq item.type "class")}}
-            {{{item.system.experience_clues}}}
+            {{localize "BITD.ClassExpClueDescription"}}<br>{{{item.system.experience_clues}}} {{{localize "BITD.ClassExpClue2"}}} <br> {{localize "BITD.ClassExpClue3"}}<br> {{localize "BITD.ClassExpClue4"}}
         {{/if}}
       {{/each}}
     </div>

@@ -1,4 +1,3 @@
-2024/02/09-15:18:42.711 3c54 Log #166: 0 ops saved to Table #167 OK
-2024/02/09-15:18:42.711 3c54 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\macros/000166.log: OK
-2024/02/09-15:18:42.713 3c54 Archiving F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\macros/MANIFEST-000165: OK
-2024/02/09-15:18:42.716 3c54 **** Repaired leveldb F:\Foundry Data\Foundry Data\Data\systems\girl-by-moonlight\packs\macros; recovered 0 files; 0 bytes. Some data may have been lost. ****
+2024/02/09-15:49:31.442 5918 Recovering log #169
+2024/02/09-15:49:31.447 5918 Delete type=0 #169
+2024/02/09-15:49:31.448 5918 Delete type=3 #168
