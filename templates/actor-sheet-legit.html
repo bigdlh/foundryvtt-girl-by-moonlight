@@ -223,33 +223,11 @@
 </div>
 </div>
 
-  <div class="playbookcolumn  blurbbox" >
+  <div class="playbookcolumn" >
+    <div class="blurbbox">
 
     <div class="label-stripe">
-      <p><label for="character-{{_id}}-experience-0">{{localize "BITD.Abilities"}}</label>
-      <a class="item-add-popup" data-item-type="ability" data-limiter="{{system.character_class}}"><i class="fas fa-plus-square"></i></a></p>
-      <div id="character-experience" class="teeth-experience tooltip">
-        <label for="character-{{_id}}-experience-0">{{localize "BITD.PExperience"}}<i class="fab fa-creative-commons-zero nullifier"></i>
-          <span class="tooltiptext left">
-            {{localize "BITD.ClassExpClueDescription"}}<br><br>
-            {{#each items as |item|}}
-            {{#if (eq item.type "class")}}
-              {{item.system.experience_clues}}
-            {{/if}}
-          {{/each}}
-            {{localize "BITD.ClassExpClue2"}}<br>
-            {{localize "BITD.ClassExpClue3"}}<br>
-            {{localize "BITD.ClassExpClue4"}}
-          </span>
-        </label>
-        {{#multiboxes system.experience}}
-          <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0" dtype="Radio">
-          {{#times_from_1 system.experienceMax}}
-            <input type="radio" id="character-{{../_id}}-experience-{{this}}" name="system.experience" value="{{this}}" dtype="Radio">
-            <label for="character-{{../_id}}-experience-{{this}}"></label>
-          {{/times_from_1}}
-        {{/multiboxes}}
-      </div>
+      <label>{{localize "BITD.Abilities"}}</label>
     </div>
 
     <div id="abilities" class="tab flex-vertical">
@@ -332,6 +310,32 @@
         {{/each}}
       </div>
     </div>
+    </div>
+    <br>
+
+    <div class="blurbbox">
+          <div class="label-stripe">
+      <p><label for="character-{{_id}}-experience-0">{{localize "BITD.ExpClues"}}</label>
+      <div id="character-experience" class="teeth-experience tooltip">
+        <label for="character-{{_id}}-experience-0">{{localize "BITD.PExperience"}}<i class="fab fa-creative-commons-zero nullifier"></i>
+        
+        </label>
+        {{#multiboxes system.experience}}
+          <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0" dtype="Radio">
+          {{#times_from_1 system.experienceMax}}
+            <input type="radio" id="character-{{../_id}}-experience-{{this}}" name="system.experience" value="{{this}}" dtype="Radio">
+            <label for="character-{{../_id}}-experience-{{this}}"></label>
+          {{/times_from_1}}
+        {{/multiboxes}}
+      </div>
+    </div>    
+      {{#each items as |item id|}}
+        {{#if (eq item.type "class")}}
+            {{{item.system.experience_clues}}}
+        {{/if}}
+      {{/each}}
+    </div>
+
   </div>
 
   <div>
