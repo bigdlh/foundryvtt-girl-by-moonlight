@@ -70,7 +70,7 @@
       <input type="text" id="character-{{_id}}-look" name="system.promise2" value="{{system.promise2}}">
     </div>
 
-    <div>
+    <!-- <div>
       <a class="tooltip"><strong>Avatar's Virtue: </strong>A
         <span class="tooltiptext right">When your actions align with your Avatar’s virtue, clear 1 stress</span>
         {{#each items as |item id|}}
@@ -88,7 +88,7 @@
         {{/if}}
         {{/each}}
       </a>
-    </div>
+    </div> -->
   
   </div>
 
@@ -211,6 +211,20 @@
           {{#times_from_1 6}}
             <input type="radio" id="character-{{../_id}}-link2-{{this}}" name="system.link2.value" value="{{this}}" dtype="Radio">
             <label for="character-{{../_id}}-link2-{{this}}"></label>
+          {{/times_from_1}}
+        {{/multiboxes}}
+      </div>
+    </div>
+    <div id="stress-trauma" class="section big-teeth-section">
+      <div id="character-{{_id}}-link3" class="big-teeth">
+        {{#multiboxes system.link3.value}}
+          <input type="radio" id="character-{{_id}}-link3-0" name="system.link3.value" value="0" dtype="Radio">
+          <div id="stress-vice">
+            <label class="black-label" for="character-{{_id}}-link3-0">Hugh Daniel</label>
+          </div>
+          {{#times_from_1 6}}
+            <input type="radio" id="character-{{../_id}}-link3-{{this}}" name="system.link3.value" value="{{this}}" dtype="Radio">
+            <label for="character-{{../_id}}-link3-{{this}}"></label>
           {{/times_from_1}}
         {{/multiboxes}}
       </div>
